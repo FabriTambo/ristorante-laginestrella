@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ristorante La Ginestrella – Cella di Varzi, Oltrepò Pavese</title>
+<meta name="description" content="Ristorante La Ginestrella a Varzi, Oltrepò Pavese. Cucina tipica lombarda, salame D.O.P. di nostra produzione, pasta fresca fatta a mano. Frazione Cella 32, Varzi (PV).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* ── RESET COMPLETO TEMA WORDPRESS ── */
+#page, #content, #primary, #secondary,
+.site-header, .ast-above-header, #ast-hfb-above-header,
+.main-header-bar, #masthead, .entry-header,
+.entry-content, .ast-container, .site-content,
+footer.site-footer, .ast-site-footer,
+.elementor, .elementor-section-wrap,
+.wp-block-post-content {
+  all: unset !important;
+  display: none !important;
+}
+html, body {
+  all: unset;
+  display: block;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ── RESET BASE ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --oro: #B8872A;
+  --oro-chiaro: #D4A843;
+  --crema: #F5EDD8;
+  --crema-scura: #EAD9BB;
+  --fumo: #1E1510;
+  --fumo-medio: #2A1F14;
+  --terra: #5C3A1E;
+  --terra-chiara: #7A4F2E;
+  --bianco-caldo: #FBF6EC;
+}
+
+body {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  background: var(--fumo) !important;
+  color: var(--crema) !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  zoom: 1 !important;
+  transform: none !important;
+  -webkit-text-size-adjust: 100% !important;
+}
+
+#ginestrella-site { display: block !important; width: 100%; }
+
+/* ── NAV ── */
+#ginestrella-site nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.2rem 4rem;
+  transition: background 0.5s, padding 0.3s;
+  background: linear-gradient(to bottom, rgba(30,21,16,0.9), transparent);
+}
+#ginestrella-site nav.scrolled {
+  background: rgba(30,21,16,0.97);
+  border-bottom: 1px solid rgba(184,135,42,0.2);
+  padding: 0.8rem 4rem;
+}
+#ginestrella-site .nav-brand { text-decoration: none; }
+#ginestrella-site .nav-brand-name { font-family: 'Cinzel', serif; font-size: 1rem; letter-spacing: 0.22em; color: var(--oro); display: block; }
+#ginestrella-site .nav-brand-sub { font-size: 0.6rem; letter-spacing: 0.4em; color: var(--crema-scura); display: block; margin-top: 2px; }
+#ginestrella-site .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+#ginestrella-site .nav-links a { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.18em; color: var(--crema-scura); text-decoration: none; transition: color 0.3s; }
+#ginestrella-site .nav-links a:hover { color: var(--oro-chiaro); }
+#ginestrella-site .nav-cta { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.18em; color: var(--oro); border: 1px solid var(--oro); padding: 0.6rem 1.4rem; text-decoration: none; transition: all 0.3s; }
+#ginestrella-site .nav-cta:hover { background: var(--oro); color: var(--fumo); }
+#ginestrella-site .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+#ginestrella-site .nav-hamburger span { display: block; width: 24px; height: 1px; background: var(--crema); }
+
+/* ── HERO ── */
+#ginestrella-site .hero {
+  position: relative; height: 100vh; min-height: 650px;
+  display: flex; align-items: center; overflow: hidden;
+}
+#ginestrella-site .hero-bg {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(135deg, rgba(30,21,16,0.82) 0%, rgba(30,21,16,0.4) 55%, rgba(92,58,30,0.6) 100%),
+    url('https://www.ristorantelaginestrella.it/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-12-at-10.01.41.jpeg') center/cover no-repeat;
+}
+#ginestrella-site .hero-bg::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, transparent 20%, rgba(30,21,16,0.55) 100%);
+}
+#ginestrella-site .hero-content { position: relative; z-index: 2; padding: 0 8rem; max-width: 820px; }
+#ginestrella-site .hero-tag {
+  font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.5em;
+  color: var(--oro); margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 1rem;
+  animation: gin-fadeUp 1s ease 0.1s both;
+}
+#ginestrella-site .hero-tag::before { content: ''; display: block; width: 40px; height: 1px; background: var(--oro); }
+#ginestrella-site .hero h1 {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300;
+  font-size: clamp(3.2rem, 7vw, 5.8rem); line-height: 1.05;
+  color: var(--bianco-caldo); margin: 0 0 0.2rem;
+  animation: gin-fadeUp 1s ease 0.25s both;
+}
+#ginestrella-site .hero h1 em { font-style: italic; color: var(--oro-chiaro); }
+#ginestrella-site .hero-desc {
+  font-size: clamp(1rem, 1.8vw, 1.2rem); color: var(--crema-scura);
+  font-style: italic; font-weight: 300; line-height: 1.7;
+  max-width: 520px; margin: 1.8rem 0 2.8rem;
+  animation: gin-fadeUp 1s ease 0.4s both;
+}
+#ginestrella-site .hero-btns { display: flex; gap: 1.2rem; flex-wrap: wrap; animation: gin-fadeUp 1s ease 0.55s both; }
+#ginestrella-site .hero-scroll {
+  position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+  font-family: 'Cinzel', serif; font-size: 0.55rem; letter-spacing: 0.4em;
+  color: rgba(245,237,216,0.4); z-index: 2; animation: gin-bounce 2.5s infinite;
+}
+#ginestrella-site .hero-scroll::after { content: ''; display: block; width: 1px; height: 45px; background: linear-gradient(to bottom, rgba(184,135,42,0.7), transparent); }
+
+@keyframes gin-fadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
+@keyframes gin-bounce { 0%,100%{ transform:translateX(-50%) translateY(0); } 60%{ transform:translateX(-50%) translateY(8px); } }
+
+/* ── BOTTONI ── */
+#ginestrella-site .btn-oro {
+  background: var(--oro); color: var(--fumo);
+  font-family: 'Cinzel', serif; font-size: 0.68rem; letter-spacing: 0.2em;
+  padding: 1rem 2.2rem; text-decoration: none; display: inline-block;
+  transition: background 0.3s, transform 0.2s; border: none; cursor: pointer;
+}
+#ginestrella-site .btn-oro:hover { background: var(--oro-chiaro); transform: translateY(-2px); }
+#ginestrella-site .btn-outline {
+  background: transparent; color: var(--crema);
+  font-family: 'Cinzel', serif; font-size: 0.68rem; letter-spacing: 0.2em;
+  padding: 1rem 2.2rem; text-decoration: none; display: inline-block;
+  border: 1px solid rgba(245,237,216,0.45); transition: all 0.3s;
+}
+#ginestrella-site .btn-outline:hover { border-color: var(--crema); background: rgba(245,237,216,0.08); }
+#ginestrella-site .btn-outline-scuro {
+  background: transparent; color: var(--terra);
+  font-family: 'Cinzel', serif; font-size: 0.68rem; letter-spacing: 0.2em;
+  padding: 1rem 2.2rem; text-decoration: none; display: inline-block;
+  border: 1px solid var(--terra); transition: all 0.3s;
+}
+#ginestrella-site .btn-outline-scuro:hover { background: var(--terra); color: var(--crema); }
+
+/* ── LABEL / TITOLO SEZIONE ── */
+#ginestrella-site .label-sez {
+  font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.45em;
+  color: var(--oro); display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.2rem;
+}
+#ginestrella-site .label-sez::before { content: ''; width: 28px; height: 1px; background: var(--oro); }
+#ginestrella-site .label-sez.center { justify-content: center; }
+#ginestrella-site .label-sez.center::before { display: none; }
+#ginestrella-site .label-sez.dark { color: var(--terra); }
+#ginestrella-site .label-sez.dark::before { background: var(--terra); }
+#ginestrella-site .titolo-sez {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300;
+  font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.1; color: var(--bianco-caldo);
+}
+#ginestrella-site .titolo-sez em { font-style: italic; color: var(--oro-chiaro); }
+#ginestrella-site .titolo-sez.dark { color: var(--fumo); }
+#ginestrella-site .titolo-sez.dark em { color: var(--terra-chiara); }
+
+/* ── STRIP NUMERI ── */
+#ginestrella-site .strip {
+  background: var(--terra);
+  display: grid; grid-template-columns: repeat(3,1fr);
+  border-top: 1px solid rgba(184,135,42,0.25);
+}
+#ginestrella-site .strip-item {
+  padding: 2.5rem; text-align: center;
+  border-right: 1px solid rgba(184,135,42,0.15);
+}
+#ginestrella-site .strip-item:last-child { border-right: none; }
+#ginestrella-site .strip-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; color: var(--oro-chiaro); line-height: 1; }
+#ginestrella-site .strip-label { font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.3em; color: var(--crema-scura); margin-top: 0.4rem; }
+
+/* ── SEZIONE IDENTITÀ ── */
+#ginestrella-site .identita {
+  display: grid; grid-template-columns: 1fr 1fr; min-height: 600px;
+}
+#ginestrella-site .identita-img { overflow: hidden; position: relative; }
+#ginestrella-site .identita-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 6s ease; display: block; }
+#ginestrella-site .identita-img:hover img { transform: scale(1.04); }
+#ginestrella-site .identita-img::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to right, transparent 70%, var(--fumo-medio) 100%);
+}
+#ginestrella-site .identita-testo {
+  background: var(--fumo-medio); padding: 6rem 5rem;
+  display: flex; flex-direction: column; justify-content: center;
+}
+#ginestrella-site .identita-testo p { font-size: 1.1rem; line-height: 1.95; color: var(--crema-scura); font-weight: 300; margin-top: 1.8rem; }
+#ginestrella-site .badge {
+  display: inline-flex; align-items: center; gap: 0.8rem;
+  margin-top: 2.5rem; padding: 0.8rem 1.5rem;
+  border: 1px solid rgba(184,135,42,0.35);
+  font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.2em; color: var(--oro);
+}
+
+/* ── STORIA ── */
+#ginestrella-site .storia {
+  display: grid; grid-template-columns: 1fr 1fr; min-height: 500px;
+  background: var(--bianco-caldo);
+}
+#ginestrella-site .storia-testo {
+  padding: 6rem 5rem; background: var(--bianco-caldo);
+  display: flex; flex-direction: column; justify-content: center;
+}
+#ginestrella-site .storia-testo p { font-size: 1.1rem; line-height: 1.95; color: #4a3828; margin-top: 1.8rem; }
+#ginestrella-site .storia-img { overflow: hidden; position: relative; }
+#ginestrella-site .storia-img img { width: 100%; height: 100%; object-fit: cover; filter: sepia(25%) saturate(85%); transition: transform 6s ease; display: block; }
+#ginestrella-site .storia-img:hover img { transform: scale(1.03); }
+#ginestrella-site .storia-img::before {
+  content: 'DAL 1950'; position: absolute; bottom: 2rem; left: 2rem; z-index: 2;
+  font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.3em;
+  background: rgba(30,21,16,0.85); color: var(--oro); padding: 0.6rem 1.2rem;
+}
+
+/* ── CITAZIONE ── */
+#ginestrella-site .citazione {
+  background: var(--terra); padding: 5rem 8rem; text-align: center; overflow: hidden;
+}
+#ginestrella-site .citazione blockquote {
+  font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 3vw, 2.3rem);
+  font-style: italic; font-weight: 300; color: var(--crema); line-height: 1.55;
+  max-width: 780px; margin: 0 auto;
+}
+#ginestrella-site .citazione cite {
+  display: block; margin-top: 1.8rem; font-family: 'Cinzel', serif;
+  font-size: 0.65rem; letter-spacing: 0.35em; color: var(--oro); font-style: normal;
+}
+
+/* ── MENU ── */
+#ginestrella-site .menu-sez { background: var(--fumo); padding: 8rem 0; }
+#ginestrella-site .menu-header { text-align: center; padding: 0 4rem; margin-bottom: 5rem; }
+#ginestrella-site .menu-prezzo {
+  display: inline-block; margin-top: 1rem;
+  font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; color: var(--crema-scura);
+}
+#ginestrella-site .menu-prezzo strong { font-size: 2.5rem; color: var(--oro-chiaro); font-weight: 300; font-style: normal; }
+#ginestrella-site .menu-card {
+  max-width: 800px; margin: 0 auto;
+  border: 1px solid rgba(184,135,42,0.2); background: rgba(245,237,216,0.03);
+}
+#ginestrella-site .portata {
+  padding: 2.5rem 3.5rem; border-bottom: 1px solid rgba(184,135,42,0.12);
+}
+#ginestrella-site .portata:last-child { border-bottom: none; }
+#ginestrella-site .portata-head {
+  display: flex; align-items: center; gap: 1.2rem; margin-bottom: 1.2rem;
+}
+#ginestrella-site .portata-icon { font-size: 1.4rem; }
+#ginestrella-site .portata-nome { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.28em; color: var(--oro); }
+#ginestrella-site .portata-line { flex: 1; height: 1px; background: rgba(184,135,42,0.3); }
+#ginestrella-site .portata-piatti { list-style: none; }
+#ginestrella-site .portata-piatti li {
+  font-size: 1.05rem; color: var(--crema-scura); padding: 0.45rem 0;
+  border-bottom: 1px solid rgba(245,237,216,0.06);
+  font-weight: 300; font-style: italic;
+  display: flex; align-items: center; gap: 0.8rem;
+}
+#ginestrella-site .portata-piatti li:last-child { border-bottom: none; }
+#ginestrella-site .portata-piatti li::before { content: '—'; color: var(--oro); font-style: normal; font-size: 0.8rem; flex-shrink: 0; }
+#ginestrella-site .menu-nota {
+  text-align: center; padding: 2rem 3.5rem;
+  border-top: 1px solid rgba(184,135,42,0.15);
+  font-size: 0.9rem; color: rgba(245,237,216,0.45); font-style: italic;
+}
+#ginestrella-site .menu-cta { text-align: center; margin-top: 3.5rem; }
+
+/* ── GALLERY ── */
+#ginestrella-site .gallery {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1fr;
+  grid-template-rows: 300px 300px;
+  gap: 3px;
+}
+#ginestrella-site .gallery-item { overflow: hidden; position: relative; }
+#ginestrella-site .gallery-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 5s ease; display: block;
+}
+#ginestrella-site .gallery-item:hover img { transform: scale(1.06); }
+#ginestrella-site .gallery-item.grande { grid-row: 1 / 3; }
+#ginestrella-site .gallery-item::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(30,21,16,0.4) 0%, transparent 50%);
+  transition: opacity 0.4s; pointer-events: none;
+}
+#ginestrella-site .gallery-item:hover::after { opacity: 0.2; }
+
+/* ── RECENSIONI ── */
+#ginestrella-site .recensioni { background: var(--terra); padding: 7rem 8rem; }
+#ginestrella-site .rec-header { text-align: center; margin-bottom: 4rem; }
+#ginestrella-site .rec-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+#ginestrella-site .rec-card {
+  background: rgba(30,21,16,0.45); border: 1px solid rgba(184,135,42,0.18);
+  padding: 2.5rem; position: relative;
+}
+#ginestrella-site .rec-stelle { color: var(--oro); font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 1.2rem; }
+#ginestrella-site .rec-testo { font-size: 1.05rem; font-style: italic; line-height: 1.75; color: var(--crema-scura); font-weight: 300; }
+#ginestrella-site .rec-autore { margin-top: 1.5rem; font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.2em; color: var(--oro); }
+#ginestrella-site .rec-card::before {
+  content: '\201C'; position: absolute; top: 0.5rem; left: 1.5rem;
+  font-size: 5rem; color: rgba(184,135,42,0.1); font-family: Georgia; line-height: 1;
+}
+#ginestrella-site .rec-link { text-align: center; margin-top: 3rem; }
+/* Trustindex widget override */
+#ginestrella-site #trustindex-widget { max-width: 1100px; margin: 0 auto; }
+
+/* ── EVENTO ── */
+#ginestrella-site .evento {
+  background: var(--fumo-medio);
+  border-top: 1px solid rgba(184,135,42,0.2);
+  border-bottom: 1px solid rgba(184,135,42,0.2);
+  display: grid; grid-template-columns: 1fr 400px;
+  min-height: 420px;
+}
+#ginestrella-site .evento-locandina { overflow: hidden; }
+#ginestrella-site .evento-locandina img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+#ginestrella-site .evento-content {
+  padding: 4rem 5rem; display: flex; flex-direction: column; justify-content: center;
+}
+#ginestrella-site .evento-data { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; color: var(--bianco-caldo); line-height: 1.2; }
+#ginestrella-site .evento-data em { font-style: italic; color: var(--oro-chiaro); }
+#ginestrella-site .evento-desc { font-size: 1rem; color: var(--crema-scura); margin-top: 0.8rem; font-style: italic; line-height: 1.7; }
+#ginestrella-site .evento-prezzo { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--oro-chiaro); font-weight: 300; margin-top: 1rem; }
+#ginestrella-site .evento-btns { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 2rem; }
+
+/* ── ORARI ── */
+#ginestrella-site .orari {
+  background: var(--bianco-caldo); color: var(--fumo);
+  display: grid; grid-template-columns: 1fr 1fr; min-height: 500px;
+}
+#ginestrella-site .orari-content { padding: 6rem 5rem 6rem 8rem; display: flex; flex-direction: column; justify-content: center; }
+#ginestrella-site .orari-table { margin-top: 2.5rem; }
+#ginestrella-site .orario-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 0.9rem 0; border-bottom: 1px solid rgba(92,58,30,0.12); font-size: 1rem;
+}
+#ginestrella-site .orario-row:last-child { border-bottom: none; }
+#ginestrella-site .orario-g { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.15em; color: var(--terra); }
+#ginestrella-site .orario-o { color: #4a3828; }
+#ginestrella-site .orario-c { color: #b09080; font-style: italic; }
+#ginestrella-site .orari-links { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0.8rem; }
+#ginestrella-site .orari-link {
+  display: flex; align-items: center; gap: 0.8rem; padding: 0.9rem 1.2rem;
+  border: 1px solid rgba(92,58,30,0.2); color: var(--fumo-medio); text-decoration: none;
+  font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.15em; transition: all 0.3s;
+}
+#ginestrella-site .orari-link:hover { background: var(--terra); color: var(--crema); border-color: var(--terra); }
+#ginestrella-site .orari-mappa { overflow: hidden; }
+#ginestrella-site .orari-mappa iframe { width: 100%; height: 100%; border: none; filter: sepia(25%) saturate(75%) brightness(92%); display: block; }
+
+/* ── FOOTER ── */
+#ginestrella-site footer {
+  background: var(--fumo); border-top: 1px solid rgba(184,135,42,0.15); padding: 5rem 8rem 2.5rem;
+}
+#ginestrella-site .footer-grid {
+  display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 4rem;
+  padding-bottom: 4rem; border-bottom: 1px solid rgba(184,135,42,0.1);
+}
+#ginestrella-site .footer-logo { font-family: 'Cinzel', serif; font-size: 1.1rem; letter-spacing: 0.22em; color: var(--oro); }
+#ginestrella-site .footer-brand p { margin-top: 1rem; font-size: 0.95rem; line-height: 1.85; color: rgba(245,237,216,0.5); }
+#ginestrella-site .footer-addr { margin-top: 1rem; font-size: 0.9rem; color: rgba(245,237,216,0.4); font-style: italic; line-height: 1.7; }
+#ginestrella-site .footer-social { display: flex; gap: 0.8rem; margin-top: 1.8rem; }
+#ginestrella-site .soc-btn {
+  width: 36px; height: 36px; border: 1px solid rgba(184,135,42,0.3);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--oro); text-decoration: none; font-size: 0.85rem; transition: all 0.3s;
+}
+#ginestrella-site .soc-btn:hover { background: var(--oro); color: var(--fumo); }
+#ginestrella-site .footer-col h4 { font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.3em; color: var(--oro); margin-bottom: 1.4rem; }
+#ginestrella-site .footer-col ul { list-style: none; }
+#ginestrella-site .footer-col ul li { margin-bottom: 0.7rem; }
+#ginestrella-site .footer-col ul li a { color: rgba(245,237,216,0.5); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+#ginestrella-site .footer-col ul li a:hover { color: var(--crema); }
+#ginestrella-site .footer-bottom {
+  padding-top: 2rem; display: flex; justify-content: space-between; align-items: center;
+  font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.12em; color: rgba(245,237,216,0.25);
+}
+
+/* ── FLOAT ── */
+#ginestrella-site .float-btns {
+  position: fixed; bottom: 2rem; right: 1.8rem; z-index: 9998;
+  display: flex; flex-direction: column; gap: 0.7rem;
+}
+#ginestrella-site .float-btn {
+  width: 50px; height: 50px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.45); transition: transform 0.25s;
+}
+#ginestrella-site .float-btn:hover { transform: scale(1.12); }
+#ginestrella-site .float-tel { background: var(--oro); }
+#ginestrella-site .float-wa { background: #25D366; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  #ginestrella-site nav { padding: 1rem 1.5rem; }
+  #ginestrella-site .nav-links { display: none !important; }
+  #ginestrella-site .nav-cta { display: none !important; }
+  #ginestrella-site .nav-hamburger { display: flex; }
+  #ginestrella-site .hero-content { padding: 0 1.5rem; }
+  #ginestrella-site .strip { grid-template-columns: 1fr; }
+  #ginestrella-site .strip-item { border-right: none; border-bottom: 1px solid rgba(184,135,42,0.15); }
+  #ginestrella-site .identita, #ginestrella-site .storia, #ginestrella-site .orari { grid-template-columns: 1fr; }
+  #ginestrella-site .identita-img, #ginestrella-site .storia-img, #ginestrella-site .orari-mappa { height: 300px; }
+  #ginestrella-site .identita-testo, #ginestrella-site .storia-testo, #ginestrella-site .orari-content { padding: 3rem 1.5rem; }
+  #ginestrella-site .citazione { padding: 4rem 1.5rem; }
+  #ginestrella-site .menu-sez { padding: 4rem 0; }
+  #ginestrella-site .menu-header { padding: 0 1.5rem; }
+  #ginestrella-site .menu-card { margin: 0 1.5rem; }
+  #ginestrella-site .portata { padding: 1.8rem 1.5rem; }
+  #ginestrella-site .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  #ginestrella-site .gallery-item.grande { grid-row: auto; }
+  #ginestrella-site .gallery-item { height: 220px; }
+  #ginestrella-site .recensioni { padding: 4rem 1.5rem; }
+  #ginestrella-site .rec-grid { grid-template-columns: 1fr; }
+  #ginestrella-site .evento { grid-template-columns: 1fr; }
+  #ginestrella-site .evento-locandina { height: 300px; }
+  #ginestrella-site .evento-content { padding: 3rem 1.5rem; }
+  #ginestrella-site footer { padding: 4rem 1.5rem 2rem; }
+  #ginestrella-site .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+</style>
+</head>
+<body>
+<div id="ginestrella-site">
+
+<!-- NAV -->
+<nav id="gin-nav">
+  <a href="#" class="nav-brand">
+    <span class="nav-brand-name">La Ginestrella</span>
+    <span class="nav-brand-sub">Cella di Varzi · Oltrepò Pavese</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#identita">Il Ristorante</a></li>
+    <li><a href="#menu">Menù</a></li>
+    <li><a href="#recensioni">Recensioni</a></li>
+    <li><a href="#orari">Contatti</a></li>
+  </ul>
+  <a href="https://laginestrella.plateform.app/welcome" class="nav-cta" target="_blank">Prenota un Tavolo</a>
+  <div class="nav-hamburger" onclick="ginToggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Frazione Cella · Varzi (PV)</div>
+    <h1>Sapori <em>autentici</em><br>dell'Oltrepò</h1>
+    <p class="hero-desc">Salame D.O.P. di nostra produzione, pasta fresca fatta a mano e l'ospitalità calda di una famiglia che custodisce le ricette di un tempo.</p>
+    <div class="hero-btns">
+      <a href="https://laginestrella.plateform.app/welcome" class="btn-oro" target="_blank">📅 Prenota Online</a>
+      <a href="#menu" class="btn-outline">Scopri il Menù</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scopri</div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-item">
+    <div class="strip-num">1950</div>
+    <div class="strip-label">Anno di Fondazione</div>
+  </div>
+  <div class="strip-item">
+    <div class="strip-num">45€</div>
+    <div class="strip-label">Menù Degustazione · Vini Inclusi</div>
+  </div>
+  <div class="strip-item">
+    <div class="strip-num">D.O.P.</div>
+    <div class="strip-label">Salame di Varzi di Nostra Produzione</div>
+  </div>
+</div>
+
+<!-- IDENTITÀ -->
+<section class="identita" id="identita">
+  <div class="identita-img">
+    <img src="https://www.ristorantelaginestrella.it/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-12-at-23.16.58.jpeg" alt="Sala del Ristorante La Ginestrella">
+  </div>
+  <div class="identita-testo">
+    <div class="label-sez">Il Ristorante</div>
+    <h2 class="titolo-sez">Una cucina che racconta<br><em>il territorio</em></h2>
+    <p>Nel cuore dell'Oltrepò Pavese, tra le colline di Varzi, La Ginestrella è molto più di un ristorante: è un luogo dove la cucina di una volta rivive ogni giorno, con ingredienti del territorio e ricette tramandate di generazione in generazione.</p>
+    <p>Vi accoglieremo in un'atmosfera calda e riservata, dove il piacere della tavola torna al centro e ogni piatto è un racconto di questa terra straordinaria.</p>
+    <div class="badge">✦ Cucina Tipica Lombarda · Salame D.O.P. di Produzione Propria</div>
+  </div>
+</section>
+
+<!-- STORIA -->
+<section class="storia">
+  <div class="storia-testo">
+    <div class="label-sez dark">La Nostra Storia</div>
+    <h2 class="titolo-sez dark">Dalla Pensione<br><em>al Ristorante</em></h2>
+    <p>Nata come pensione-ristorante nel 1950, La Ginestrella ha attraversato decenni di storia dell'Oltrepò Pavese senza mai tradire la propria essenza: accoglienza autentica, cucina vera e il salame di Varzi che è diventato il nostro simbolo.</p>
+    <p>Oltre settant'anni di passione familiare, custoditi e rinnovati di stagione in stagione.</p>
+  </div>
+  <div class="storia-img">
+    <img src="https://www.ristorantelaginestrella.it/wp-content/uploads/2026/02/Ristorante-La-Ginestrella-anni70.jpeg" alt="La Ginestrella, foto storica">
+  </div>
+</section>
+
+<!-- CITAZIONE -->
+<div class="citazione">
+  <blockquote>«Dalla nostra cantina alla vostra tavola: il salame di Varzi D.O.P. curato secondo l'antica ricetta di famiglia.»</blockquote>
+  <cite>— La Famiglia Ginestrella, dal 1950</cite>
+</div>
+
+<!-- MENU -->
+<section class="menu-sez" id="menu">
+  <div class="menu-header">
+    <div class="label-sez center">A Tavola</div>
+    <h2 class="titolo-sez" style="font-size:clamp(2.2rem,4vw,3.5rem);">Menù <em>Degustazione</em></h2>
+    <div class="menu-prezzo"><strong>45€</strong> &nbsp;a persona, con vini in abbinamento</div>
+  </div>
+  <div class="menu-card">
+    <div class="portata">
+      <div class="portata-head">
+        <span class="portata-icon">🥩</span>
+        <span class="portata-nome">Gli Antipasti</span>
+        <div class="portata-line"></div>
+      </div>
+      <ul class="portata-piatti">
+        <li>Salame di Varzi D.O.P. di nostra produzione</li>
+        <li>Coppa Piacentina DOP</li>
+        <li>Tartare agli agrumi</li>
+        <li>Carpaccio di bresaola con finocchi, mela verde e Pecorino</li>
+        <li>Cestino croccante con insalata russa</li>
+        <li>Flan di carciofi con fonduta al Parmigiano</li>
+        <li>Formaggio al cartoccio</li>
+      </ul>
+    </div>
+    <div class="portata">
+      <div class="portata-head">
+        <span class="portata-icon">🍝</span>
+        <span class="portata-nome">I Primi</span>
+        <div class="portata-line"></div>
+      </div>
+      <ul class="portata-piatti">
+        <li>Risotto ai funghi porcini</li>
+        <li>Ravioli al Brasato</li>
+      </ul>
+    </div>
+    <div class="portata">
+      <div class="portata-head">
+        <span class="portata-icon">🍧</span>
+        <span class="portata-nome">L'Intermezzo</span>
+        <div class="portata-line"></div>
+      </div>
+      <ul class="portata-piatti">
+        <li>Sorbetto ai frutti di bosco</li>
+      </ul>
+    </div>
+    <div class="portata">
+      <div class="portata-head">
+        <span class="portata-icon">🍖</span>
+        <span class="portata-nome">Il Secondo al Forno</span>
+        <div class="portata-line"></div>
+      </div>
+      <ul class="portata-piatti">
+        <li>La coppa della tradizione accompagnata da patate dorate</li>
+      </ul>
+    </div>
+    <div class="portata">
+      <div class="portata-head">
+        <span class="portata-icon">🍮</span>
+        <span class="portata-nome">I Dolci</span>
+        <div class="portata-line"></div>
+      </div>
+      <ul class="portata-piatti">
+        <li>Semifreddo agli amaretti</li>
+        <li>Panna cotta con coulis di fragole e meringhe</li>
+      </ul>
+    </div>
+    <div class="menu-nota">Il menù degustazione viene servito all'intero tavolo</div>
+  </div>
+  <div class="menu-cta">
+    <a href="https://laginestrella.plateform.app/welcome" class="btn-oro" target="_blank">📅 Prenota il tuo tavolo</a>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<div class="gallery">
+  <div class="gallery-item grande">
+    <img src="https://www.ristorantelaginestrella.it/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-12-at-10.01.41-1.jpeg" alt="Tavolo La Ginestrella">
+  </div>
+  <div class="gallery-item">
+    <img src="https://www.ristorantelaginestrella.it/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-12-at-10.01.41-2.jpeg" alt="Sala ristorante">
+  </div>
+  <div class="gallery-item">
+    <img src="https://www.ristorantelaginestrella.it/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-12-at-10.01.42.jpeg" alt="Grissini e vino">
+  </div>
+  <div class="gallery-item">
+    <img src="https://www.ristorantelaginestrella.it/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-18-at-17.36.54-1.jpeg" alt="Sala eventi">
+  </div>
+  <div class="gallery-item">
+    <img src="https://www.ristorantelaginestrella.it/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-12-at-10.01.41.jpeg" alt="Tramonto Oltrepò">
+  </div>
+</div>
+
+<!-- RECENSIONI -->
+<section class="recensioni" id="recensioni">
+  <div class="rec-header">
+    <div class="label-sez center">Cosa Dicono di Noi</div>
+    <h2 class="titolo-sez" style="font-size:clamp(2.2rem,4vw,3.2rem);text-align:center;">Le <em>Recensioni</em></h2>
+  </div>
+  <!-- WIDGET TRUSTINDEX: incolla qui il tuo codice -->
+  <div id="trustindex-widget">
+    <div class="rec-grid">
+      <div class="rec-card">
+        <div class="rec-stelle">★★★★★</div>
+        <p class="rec-testo">Ottimo ambiente. Menù del giorno con piatti molto buoni. Personale molto cortese. Consigliato.</p>
+        <div class="rec-autore">Sergio Silverring1 · Google</div>
+      </div>
+      <div class="rec-card">
+        <div class="rec-stelle">★★★★★</div>
+        <p class="rec-testo">Cena tra amici in un ambiente accogliente, personale molto gentile e attento, piatti della tradizione accompagnati da un ottimo vino rosso. Tornerò sicuramente.</p>
+        <div class="rec-autore">Renato Genovese · Google</div>
+      </div>
+      <div class="rec-card">
+        <div class="rec-stelle">★★★★★</div>
+        <p class="rec-testo">Posto meraviglioso, cucina tipica dell'Oltrepò di altissimo livello. Il salame di loro produzione è semplicemente unico. Atmosfera calda, personale gentilissimo.</p>
+        <div class="rec-autore">Laura B. · Google</div>
+      </div>
+    </div>
+  </div>
+  <div class="rec-link">
+    <a href="https://www.google.com/search?q=La+Ginestrella+Varzi+recensioni" target="_blank" class="btn-outline">Leggi tutte le recensioni su Google →</a>
+  </div>
+</section>
+
+<!-- EVENTO CENA DI PESCE -->
+<div class="evento">
+  <div class="evento-locandina">
+    <img src="https://www.ristorantelaginestrella.it/wp-content/uploads/2026/05/La_Ginestrella_cenadipesce.jpeg" alt="Cena di Pesce La Ginestrella">
+  </div>
+  <div class="evento-content">
+    <div class="label-sez">Prossimo Evento</div>
+    <div class="evento-data">Cena a base di <em>Pesce</em><br>Sabato 23 Maggio 2026</div>
+    <p class="evento-desc">Ore 20:30 · Un menù speciale dedicato ai sapori del mare con vini selezionati del nostro territorio. Prenotazione obbligatoria.</p>
+    <div class="evento-prezzo">60€ <span style="font-size:1rem;color:var(--crema-scura);font-style:italic;">con vini in abbinamento</span></div>
+    <div class="evento-btns">
+      <a href="https://wa.me/393518640002" class="btn-oro" target="_blank">💬 Prenota su WhatsApp</a>
+      <a href="tel:+390383521050" class="btn-outline">📞 0383 52150</a>
+    </div>
+  </div>
+</div>
+
+<!-- ORARI -->
+<section class="orari" id="orari">
+  <div class="orari-content">
+    <div class="label-sez dark">Vieni a Trovarci</div>
+    <h2 class="titolo-sez dark">Orari &amp; <em>Contatti</em></h2>
+    <div class="orari-table">
+      <div class="orario-row"><span class="orario-g">Lunedì</span><span class="orario-c">Chiuso</span></div>
+      <div class="orario-row"><span class="orario-g">Martedì – Venerdì</span><span class="orario-o">12:00 – 14:30</span></div>
+      <div class="orario-row"><span class="orario-g">Sabato</span><span class="orario-o">12:00 – 14:30 · 19:30 – 22:00</span></div>
+      <div class="orario-row"><span class="orario-g">Domenica</span><span class="orario-o">12:00 – 15:00</span></div>
+    </div>
+    <div class="orari-links">
+      <a href="tel:+390383521050" class="orari-link">📞 &nbsp;0383 52150 — Prenota un tavolo</a>
+      <a href="https://wa.me/393518640002" class="orari-link" target="_blank">💬 &nbsp;351 8640002 — WhatsApp</a>
+      <a href="https://maps.google.com/?q=Frazione+Cella+32+Varzi+PV" class="orari-link" target="_blank">📍 &nbsp;Fraz. Cella 32, 27057 Varzi (PV)</a>
+    </div>
+  </div>
+  <div class="orari-mappa">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2832.235741739548!2d9.18161197589094!3d44.77599907909327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47875279688c86b3%3A0xf9c9a359cd34fa7c!2sLa%20Ginestrella!5e0!3m2!1sit!2sit!4v1778620765118!5m2!1sit!2sit" allowfullscreen loading="lazy" title="Mappa Ristorante La Ginestrella Varzi"></iframe>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">Ristorante La Ginestrella</div>
+      <p>Cucina tipica dell'Oltrepò Pavese con salame D.O.P. di nostra produzione. Dal 1950 portiamo in tavola i sapori autentici di Varzi e delle sue colline.</p>
+      <div class="footer-addr">Frazione Cella, 32 · 27057 Varzi (PV)<br>Tel. 0383 52150 · WhatsApp 351 8640002</div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/LaGinestrella.CelladiVarzi" class="soc-btn" target="_blank">f</a>
+        <a href="https://www.instagram.com/ristorantelaginestrella/" class="soc-btn" target="_blank">◎</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigazione</h4>
+      <ul>
+        <li><a href="#identita">Il Ristorante</a></li>
+        <li><a href="#menu">Menù Degustazione</a></li>
+        <li><a href="#recensioni">Recensioni</a></li>
+        <li><a href="#orari">Orari e Contatti</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contatti</h4>
+      <ul>
+        <li><a href="tel:+390383521050">📞 0383 52150</a></li>
+        <li><a href="https://wa.me/393518640002" target="_blank">💬 351 8640002</a></li>
+        <li><a href="https://maps.google.com/?q=Frazione+Cella+32+Varzi+PV" target="_blank">📍 Fraz. Cella 32, Varzi</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Ristorante La Ginestrella · Tutti i diritti riservati</span>
+    <span>Varzi · Oltrepò Pavese</span>
+  </div>
+</footer>
+
+<!-- FLOAT -->
+<div class="float-btns">
+  <a href="tel:+390383521050" class="float-btn float-tel" title="Chiama">📞</a>
+  <a href="https://wa.me/393518640002" class="float-btn float-wa" title="WhatsApp" target="_blank">💬</a>
+</div>
+
+</div><!-- #ginestrella-site -->
+
+<script>
+const ginNav = document.getElementById('gin-nav');
+window.addEventListener('scroll', function() {
+  ginNav.classList.toggle('scrolled', window.scrollY > 80);
+});
+
+const ginObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('#ginestrella-site .portata, #ginestrella-site .rec-card, #ginestrella-site .strip-item').forEach(function(el) {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(18px)';
+  el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+  ginObs.observe(el);
+});
+
+function ginToggleMenu() {
+  var links = document.querySelector('#ginestrella-site .nav-links');
+  if (links) {
+    var isOpen = links.style.display === 'flex';
+    links.style.display = isOpen ? 'none' : 'flex';
+    links.style.flexDirection = 'column';
+    links.style.position = 'fixed';
+    links.style.top = '60px';
+    links.style.left = '0';
+    links.style.right = '0';
+    links.style.background = 'rgba(30,21,16,0.97)';
+    links.style.padding = '2rem';
+    links.style.gap = '1.5rem';
+    links.style.zIndex = '9998';
+  }
+}
+</script>
+</body>
+</html>
