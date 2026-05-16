@@ -8,4 +8,4 @@ Disallow: /wp-json/
 Disallow: /xmlrpc.php
 
 # Sitemap
-Sitemap: https://www.laginestrella.it/sitemap.xml
+Sitemap: https://www.ristorantelaginestrella.it/sitemap.xml
