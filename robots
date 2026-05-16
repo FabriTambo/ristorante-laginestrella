@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Blocca aree tecniche WordPress (se presenti)
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /wp-json/
+Disallow: /xmlrpc.php
+
+# Sitemap
+Sitemap: https://www.laginestrella.it/sitemap.xml
