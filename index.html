@@ -42,7 +42,9 @@
   "foundingDate": "1950",
   "image": [
     "https://fabritambo.github.io/ristorante-laginestrella/images/hero.jpeg",
-    "https://fabritambo.github.io/ristorante-laginestrella/images/sala.jpeg"
+    "https://fabritambo.github.io/ristorante-laginestrella/images/sala.jpeg",
+    "https://fabritambo.github.io/ristorante-laginestrella/images/SalameVarziStagionatura.jpeg",
+    "https://fabritambo.github.io/ristorante-laginestrella/images/SalamediVarzi.jpeg"
   ],
   "address": {
     "@type": "PostalAddress",
@@ -1032,6 +1034,135 @@ footer::before {
 .gin-reveal-delay-3 { transition-delay: 0.3s; }
 
 /* ═══════════════════════════════════════
+   SALAME — SEZIONE DEDICATA
+═══════════════════════════════════════ */
+.salame-sez {
+  background: var(--fumo);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--oro-sottile);
+}
+.salame-sez::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(to right, transparent, var(--oro), transparent);
+}
+
+/* Hero cantina — full-width immersive */
+.salame-hero {
+  position: relative;
+  height: 70vh; min-height: 500px;
+  overflow: hidden;
+  display: flex; align-items: flex-end;
+}
+.salame-hero img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: center 30%;
+  transition: transform 8s var(--ease-silk);
+}
+.salame-hero:hover img { transform: scale(1.04); }
+.salame-hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(26,18,13,1) 0%,
+    rgba(26,18,13,0.7) 30%,
+    rgba(26,18,13,0.1) 70%,
+    rgba(26,18,13,0.3) 100%
+  );
+}
+.salame-hero-caption {
+  position: relative; z-index: 2;
+  padding: 4rem 8rem;
+  display: flex; align-items: flex-end; justify-content: space-between;
+  width: 100%;
+}
+.salame-hero-text h2 {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  color: var(--bianco-caldo); line-height: 1.05; letter-spacing: -0.01em;
+}
+.salame-hero-text h2 em { color: var(--oro-chiaro); font-style: italic; }
+.salame-hero-text p {
+  font-size: 1rem; color: rgba(234,217,187,0.65);
+  font-style: italic; margin-top: 0.8rem; max-width: 480px; line-height: 1.75;
+}
+.salame-hero-badge {
+  text-align: right; flex-shrink: 0;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem;
+}
+.salame-hero-badge .dop-label {
+  font-family: 'Cinzel', serif; font-size: 0.55rem; letter-spacing: 0.4em;
+  color: var(--oro); border: 1px solid rgba(184,135,42,0.4);
+  padding: 0.4rem 1rem; background: rgba(184,135,42,0.06);
+}
+.salame-hero-badge .anno-label {
+  font-family: 'Cormorant Garamond', serif; font-size: 0.85rem;
+  font-style: italic; color: rgba(234,217,187,0.4);
+}
+
+/* Due colonne: panorama + fetta */
+.salame-duo {
+  display: grid; grid-template-columns: 1fr 1fr;
+}
+.salame-col { position: relative; overflow: hidden; }
+.salame-col img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 8s var(--ease-silk);
+  display: block;
+}
+.salame-col:hover img { transform: scale(1.05); }
+.salame-col-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(26,18,13,0.85) 0%, rgba(26,18,13,0.1) 55%);
+  display: flex; align-items: flex-end;
+  padding: 2.5rem;
+}
+.salame-col-text { }
+.salame-col-text h3 {
+  font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.28em;
+  color: var(--oro); margin-bottom: 0.5rem;
+}
+.salame-col-text p {
+  font-size: 0.92rem; color: rgba(234,217,187,0.75);
+  font-style: italic; line-height: 1.65;
+}
+.salame-col { height: 420px; }
+
+/* Testo narrativo */
+.salame-narrazione {
+  padding: 6rem 8rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+}
+.salame-narrazione-left { }
+.salame-narrazione-left p {
+  font-size: 1.08rem; line-height: 2;
+  color: rgba(234,217,187,0.75); font-weight: 300; margin-top: 1.5rem;
+}
+.salame-steps { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
+.salame-step {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  padding: 1.5rem; border: 1px solid var(--oro-sottile);
+  background: rgba(184,135,42,0.03);
+  transition: border-color 0.3s, background 0.3s;
+}
+.salame-step:hover { border-color: rgba(184,135,42,0.3); background: rgba(184,135,42,0.07); }
+.salame-step-num {
+  font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300;
+  color: var(--oro-sottile); line-height: 1; flex-shrink: 0; letter-spacing: -0.02em;
+  width: 2.5rem; text-align: center;
+}
+.salame-step-content h4 {
+  font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.2em;
+  color: var(--oro-chiaro); margin-bottom: 0.4rem;
+}
+.salame-step-content p {
+  font-size: 0.92rem; color: rgba(234,217,187,0.6); font-style: italic; line-height: 1.65;
+}
+
+/* ═══════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════ */
 @media (max-width: 1100px) {
@@ -1040,6 +1171,8 @@ footer::before {
   .newsletter-sez::after { display: none; }
   .faq-sez { padding: 6rem 4rem; }
   .territorio-sez { padding: 5rem 4rem; }
+  .salame-hero-caption { padding: 3rem 4rem; }
+  .salame-narrazione { padding: 5rem 4rem; gap: 3rem; }
 }
 
 @media (max-width: 900px) {
@@ -1091,6 +1224,12 @@ footer::before {
 
   .territorio-sez { padding: 4rem 1.5rem; }
   .territorio-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .salame-hero { height: 55vh; min-height: 380px; }
+  .salame-hero-caption { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .salame-hero-badge { align-items: flex-start; }
+  .salame-duo { grid-template-columns: 1fr; }
+  .salame-col { height: 300px; }
+  .salame-narrazione { grid-template-columns: 1fr; padding: 4rem 1.5rem; gap: 2.5rem; }
 
   footer { padding: 4rem 1.5rem 2.5rem; }
   .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -1128,6 +1267,7 @@ footer::before {
 <nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile">
   <a href="#identita" onclick="closeMobileMenu()">Il Ristorante</a>
   <a href="#menu" onclick="closeMobileMenu()">Menù</a>
+  <a href="#salame" onclick="closeMobileMenu()">Il Salame</a>
   <a href="#gift" onclick="closeMobileMenu()">Gift Card</a>
   <a href="#recensioni" onclick="closeMobileMenu()">Recensioni</a>
   <a href="#orari" onclick="closeMobileMenu()">Contatti</a>
@@ -1144,6 +1284,7 @@ footer::before {
     <ul class="nav-links" role="list">
       <li><a href="#identita">Il Ristorante</a></li>
       <li><a href="#menu">Menù</a></li>
+      <li><a href="#salame">Il Salame</a></li>
       <li><a href="#gift">Gift Card</a></li>
       <li><a href="#recensioni">Recensioni</a></li>
       <li><a href="#orari">Contatti</a></li>
@@ -1262,6 +1403,102 @@ footer::before {
   </div>
 </section>
 
+
+<!-- SALAME DI VARZI — SEZIONE DEDICATA -->
+<section class="salame-sez" id="salame" aria-label="Il Salame di Varzi di nostra produzione">
+
+  <!-- Cantina — immagine immersiva full-width -->
+  <div class="salame-hero">
+    <img
+      src="https://fabritambo.github.io/ristorante-laginestrella/images/SalameVarziStagionatura.jpeg"
+      alt="Salame di Varzi di produzione propria in stagionatura nella cantina del Ristorante La Ginestrella, Varzi"
+      width="1400" height="800" loading="lazy"
+    >
+    <div class="salame-hero-caption">
+      <div class="salame-hero-text gin-reveal">
+        <p class="label-sez" style="margin-bottom:1rem;">La Nostra Cantina</p>
+        <h2>Il Salame di Varzi<br><em>fatto da noi</em></h2>
+        <p>Nella nostra cantina, il tempo lavora per voi. Ogni salame viene preparato secondo l'antica ricetta di famiglia, stagionato nei tempi giusti, e portato in tavola come primo antipasto del menù degustazione.</p>
+      </div>
+      <div class="salame-hero-badge gin-reveal gin-reveal-delay-1">
+        <span class="dop-label">Denominazione di Origine Protetta</span>
+        <span class="anno-label">Produzione propria dal 1950</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panorama + Fetta affiancati -->
+  <div class="salame-duo">
+    <div class="salame-col">
+      <img
+        src="https://fabritambo.github.io/ristorante-laginestrella/images/salame.jpeg"
+        alt="Salame di Varzi DOP stagionato appeso sul terrazzo con vista sulle colline dell'Oltrepò Pavese, Ristorante La Ginestrella"
+        width="800" height="420" loading="lazy"
+      >
+      <div class="salame-col-overlay">
+        <div class="salame-col-text">
+          <h3>Aria e Colline</h3>
+          <p>La stagionatura avviene con l'aria pulita dell'Oltrepò Pavese, a oltre 400 metri di altitudine. È il territorio stesso a fare la differenza.</p>
+        </div>
+      </div>
+    </div>
+    <div class="salame-col">
+      <img
+        src="https://fabritambo.github.io/ristorante-laginestrella/images/SalamediVarzi.jpeg"
+        alt="Fetta di Salame di Varzi DOP tagliata a mano su tagliere – produzione propria del Ristorante La Ginestrella"
+        width="800" height="420" loading="lazy"
+      >
+      <div class="salame-col-overlay">
+        <div class="salame-col-text">
+          <h3>La Fetta Giusta</h3>
+          <p>Colore rosso vivo, profumo intenso di spezie e quella grana grossolana che solo il vero Salame di Varzi DOP sa dare. Tagliato a mano, al momento.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Narrazione + steps processo -->
+  <div class="salame-narrazione">
+    <div class="salame-narrazione-left gin-reveal">
+      <p class="label-sez">Dalla Cantina alla Tavola</p>
+      <h2 class="titolo-sez">Una ricetta <em>di famiglia</em></h2>
+      <p>Il Salame di Varzi DOP è il cuore della nostra identità. Lo produciamo integralmente — dalla selezione delle carni alla stagionatura — nella nostra cantina a Cella di Varzi, seguendo la stessa ricetta tramantata di generazione in generazione dal 1950.</p>
+      <p>È il primo antipasto che arriva in tavola nel menù degustazione. Non un ingrediente qualsiasi: è il simbolo del ristorante, del territorio, di settantacinque anni di passione.</p>
+    </div>
+    <div class="salame-steps gin-reveal gin-reveal-delay-1">
+      <div class="salame-step">
+        <div class="salame-step-num">01</div>
+        <div class="salame-step-content">
+          <h4>Selezione delle Carni</h4>
+          <p>Solo carni suine di prima scelta, provenienti da allevamenti selezionati dell'Oltrepò e dell'Appennino Pavese.</p>
+        </div>
+      </div>
+      <div class="salame-step">
+        <div class="salame-step-num">02</div>
+        <div class="salame-step-content">
+          <h4>L'Impasto Segreto</h4>
+          <p>Sale, pepe nero in grani, aglio e vino rosso dell'Oltrepò. La proporzione esatta è la ricetta di famiglia: non la scriviamo da nessuna parte.</p>
+        </div>
+      </div>
+      <div class="salame-step">
+        <div class="salame-step-num">03</div>
+        <div class="salame-step-content">
+          <h4>Stagionatura Lenta</h4>
+          <p>Almeno 45 giorni in cantina, con l'aria dell'Appennino Pavese. Il tempo non si può forzare: è lui a fare il sapore.</p>
+        </div>
+      </div>
+      <div class="salame-step">
+        <div class="salame-step-num">04</div>
+        <div class="salame-step-content">
+          <h4>In Tavola</h4>
+          <p>Il primo antipasto del menù degustazione. Tagliato al momento, servito con pane e grissini artigianali.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
 <!-- QUOTE -->
 <blockquote class="citazione" aria-label="La nostra filosofia">
   <p>«Dalla nostra cantina alla vostra tavola: il salame di Varzi curato secondo l'antica ricetta di famiglia.»</p>
@@ -1290,10 +1527,10 @@ footer::before {
         <li>Salame di Varzi di nostra produzione</li>
         <li>Coppa Piacentina DOP</li>
         <li>Tartare agli agrumi</li>
-        <li>Carpaccio di bresaola con finocchi, mela verde e pecorino</li>
+        <li>Carpaccio di bresaola con finocchi,mela verde e pecorino</li>
         <li>Cestino croccante con insalata russa</li>
         <li>Flan di asparagi con fonduta al Taleggio</li>
-        <li>Formaggio al cartoccio – spring edition</li>
+        <li>Formaggio al cartoccio</li>
       </ul>
     </article>
 
@@ -1327,7 +1564,7 @@ footer::before {
         <div class="portata-line" aria-hidden="true"></div>
       </div>
       <ul class="portata-piatti" aria-label="Secondo piatto">
-        <li>La coppa della tradizione accompagnata da patate dorate</li>
+        <li>Coppa al forno accompagnata da patate primavera</li>
       </ul>
     </article>
 
@@ -1369,29 +1606,29 @@ footer::before {
     <span class="caption">La sala del ristorante</span>
   </div>
   <div class="gallery-item">
+    <img src="https://fabritambo.github.io/ristorante-laginestrella/images/SalameVarziStagionatura.jpeg"
+      alt="Salame di Varzi DOP in stagionatura nella cantina del Ristorante La Ginestrella" width="500" height="300" loading="lazy">
+    <span class="caption">La nostra cantina</span>
+  </div>
+  <div class="gallery-item">
+    <img src="https://fabritambo.github.io/ristorante-laginestrella/images/salame.jpeg"
+      alt="Salame di Varzi DOP stagionato sul terrazzo con le colline dell'Oltrepò Pavese" width="500" height="300" loading="lazy">
+    <span class="caption">Aria e colline</span>
+  </div>
+  <div class="gallery-item">
+    <img src="https://fabritambo.github.io/ristorante-laginestrella/images/SalamediVarzi.jpeg"
+      alt="Fetta di Salame di Varzi DOP tagliata a mano – produzione propria La Ginestrella" width="500" height="300" loading="lazy">
+    <span class="caption">Il salame di Varzi</span>
+  </div>
+  <div class="gallery-item">
     <img src="https://fabritambo.github.io/ristorante-laginestrella/images/mimosa.jpeg"
-      alt="Sala interna del Ristorante La Ginestrella a Varzi – ambiente caldo e accogliente" width="500" height="300" loading="lazy">
-    <span class="caption">La sala del ristorante</span>
+      alt="Flan di asparagi con fonduta al Taleggio – piatto del menù degustazione, Ristorante La Ginestrella Varzi" width="500" height="300" loading="lazy">
+    <span class="caption">Dal menù degustazione</span>
   </div>
   <div class="gallery-item">
     <img src="https://fabritambo.github.io/ristorante-laginestrella/images/vistamonti.jpeg"
       alt="Vista panoramica sulle colline dell'Oltrepò Pavese da Varzi – Valle Staffora" width="500" height="300" loading="lazy">
     <span class="caption">L'Oltrepò Pavese</span>
-  </div>
-  <div class="gallery-item">
-    <img src="https://fabritambo.github.io/ristorante-laginestrella/images/tramonto.jpeg"
-      alt="Tramonto sulle colline di Varzi, Oltrepò Pavese – Appennino Pavese" width="500" height="300" loading="lazy">
-    <span class="caption">Le nostre colline</span>
-  </div>
-  <div class="gallery-item">
-    <img src="https://fabritambo.github.io/ristorante-laginestrella/images/hero.jpeg"
-      alt="Esterno del Ristorante La Ginestrella, Frazione Cella di Varzi, Pavia" width="500" height="300" loading="lazy">
-    <span class="caption">La Ginestrella dal 1950</span>
-  </div>
-  <div class="gallery-item">
-    <img src="https://fabritambo.github.io/ristorante-laginestrella/images/SalamediVarzi.jpeg"
-      alt="Esterno del Ristorante La Ginestrella, Frazione Cella di Varzi, Pavia" width="500" height="300" loading="lazy">
-    <span class="caption">La Ginestrella dal 1950</span>
   </div>
 </div>
 
@@ -1544,7 +1781,7 @@ footer::before {
     </div>
     <div class="faq-item gin-reveal gin-reveal-delay-1" onclick="toggleFaq(this)">
       <h3>È necessario prenotare? <span class="faq-toggle" aria-hidden="true">+</span></h3>
-      <div class="faq-answer">Sì, la prenotazione è necessaria. Puoi prenotare online tramite il nostro sistema Plateform, chiamare lo 0383 52150 oppure scrivere su WhatsApp al 351 8640002. Consigliamo di prenotare con almeno qualche giorno di anticipo, soprattutto per il sabato sera e la domenica.</div>
+      <div class="faq-answer">Sì, la prenotazione è preferibile. Puoi prenotare online tramite il nostro sistema Plateform, chiamare lo 0383 52150 oppure scrivere su WhatsApp al 351 8640002. Consigliamo di prenotare con almeno qualche giorno di anticipo, soprattutto per il sabato sera e la domenica.</div>
     </div>
     <div class="faq-item gin-reveal gin-reveal-delay-2" onclick="toggleFaq(this)">
       <h3>Il ristorante è adatto a intolleranze alimentari? <span class="faq-toggle" aria-hidden="true">+</span></h3>
@@ -1627,6 +1864,7 @@ footer::before {
       <ul>
         <li><a href="#identita">Il Ristorante</a></li>
         <li><a href="#menu">Menù Degustazione</a></li>
+        <li><a href="#salame">Il Salame</a></li>
         <li><a href="#gift">Gift Card</a></li>
         <li><a href="#newsletter">Newsletter</a></li>
         <li><a href="#recensioni">Recensioni</a></li>
@@ -1645,7 +1883,7 @@ footer::before {
     </nav>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Ristorante La Ginestrella · P.IVA 01203840184 · Tutti i diritti riservati</span>
+    <span>© 2026 Ristorante La Ginestrella · P.IVA da inserire · Tutti i diritti riservati</span>
     <span>Varzi · Oltrepò Pavese · Valle Staffora</span>
   </div>
 </footer>
