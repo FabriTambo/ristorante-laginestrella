@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy – Ristorante La Ginestrella | Varzi (PV)</title>
+<meta name="description" content="Informativa sulla privacy del Ristorante La Ginestrella, Frazione Cella 32, Varzi (PV). Trattamento dati personali ai sensi del GDPR 2016/679.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://www.laginestrella.it/privacy-policy">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --oro: #B8872A; --oro-chiaro: #D4A843; --oro-sottile: rgba(184,135,42,0.15);
+  --crema: #F5EDD8; --fumo: #1A120D; --fumo-medio: #231810; --fumo-chiaro: #2E2016;
+  --terra: #5C3A1E; --bianco-caldo: #FBF6EC;
+  --ease-silk: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  background: var(--fumo); color: var(--crema);
+  font-size: 16px; line-height: 1.6;
+}
+a { color: var(--oro); text-decoration: none; }
+a:hover { color: var(--oro-chiaro); }
+
+body::before {
+  content: ''; position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.025; pointer-events: none; z-index: 9999;
+}
+
+/* NAV */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.2rem 4rem;
+  background: rgba(26,18,13,0.97);
+  border-bottom: 1px solid var(--oro-sottile);
+  backdrop-filter: blur(12px);
+}
+.nav-brand {
+  font-family: 'Cinzel', serif; font-size: 0.9rem;
+  letter-spacing: 0.24em; color: var(--oro); text-decoration: none;
+}
+.nav-back {
+  font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.2em;
+  color: rgba(234,217,187,0.6); text-decoration: none;
+  display: flex; align-items: center; gap: 0.6rem;
+  transition: color 0.3s;
+}
+.nav-back:hover { color: var(--oro); }
+
+/* HERO */
+.pp-hero {
+  padding: 12rem 8rem 5rem;
+  border-bottom: 1px solid var(--oro-sottile);
+  position: relative;
+}
+.pp-hero::after {
+  content: '';
+  position: absolute; bottom: 0; left: 8%; right: 8%; height: 1px;
+  background: linear-gradient(to right, transparent, var(--oro-sottile), transparent);
+}
+.pp-label {
+  font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.45em;
+  color: var(--oro); margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 0.8rem;
+}
+.pp-label::before { content: ''; width: 24px; height: 1px; background: var(--oro); }
+.pp-hero h1 {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300;
+  font-size: clamp(2.5rem, 5vw, 4rem); color: var(--bianco-caldo);
+  line-height: 1.1; letter-spacing: -0.01em;
+}
+.pp-hero h1 em { font-style: italic; color: var(--oro-chiaro); }
+.pp-meta {
+  margin-top: 1.5rem; font-size: 0.88rem;
+  color: rgba(234,217,187,0.4); font-style: italic;
+}
+
+/* CONTENT */
+.pp-wrap {
+  max-width: 860px; margin: 0 auto;
+  padding: 5rem 4rem 8rem;
+}
+
+/* INDEX */
+.pp-index {
+  background: rgba(184,135,42,0.05);
+  border: 1px solid var(--oro-sottile);
+  padding: 2rem 2.5rem; margin-bottom: 4rem;
+}
+.pp-index h3 {
+  font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.28em;
+  color: var(--oro); margin-bottom: 1.2rem;
+}
+.pp-index ol {
+  list-style: none; counter-reset: idx;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 2rem;
+}
+.pp-index ol li {
+  counter-increment: idx; font-size: 0.92rem;
+  color: rgba(234,217,187,0.6);
+}
+.pp-index ol li::before {
+  content: counter(idx) '. ';
+  color: var(--oro); font-family: 'Cinzel', serif; font-size: 0.75rem;
+}
+.pp-index ol li a { color: rgba(234,217,187,0.6); }
+.pp-index ol li a:hover { color: var(--oro-chiaro); }
+
+/* SECTIONS */
+.pp-section { margin-bottom: 3.5rem; scroll-margin-top: 100px; }
+.pp-section h2 {
+  font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.3em;
+  color: var(--oro); margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--oro-sottile);
+  display: flex; align-items: center; gap: 1rem;
+}
+.pp-section h2 .num {
+  font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300;
+  color: var(--oro-sottile); line-height: 1; flex-shrink: 0;
+}
+.pp-section p {
+  font-size: 1rem; line-height: 2; color: rgba(234,217,187,0.72);
+  font-weight: 300; margin-bottom: 1rem;
+}
+.pp-section p:last-child { margin-bottom: 0; }
+.pp-section ul {
+  list-style: none; margin: 1rem 0;
+}
+.pp-section ul li {
+  font-size: 0.98rem; color: rgba(234,217,187,0.7); line-height: 1.85;
+  padding: 0.4rem 0;
+  padding-left: 1.5rem; position: relative;
+}
+.pp-section ul li::before {
+  content: '—'; position: absolute; left: 0;
+  color: var(--oro); font-size: 0.8rem;
+}
+.pp-section strong { color: rgba(234,217,187,0.9); font-weight: 400; }
+
+/* INFO BOX */
+.info-box {
+  background: rgba(184,135,42,0.06);
+  border: 1px solid var(--oro-sottile);
+  border-left: 3px solid var(--oro);
+  padding: 1.5rem 2rem; margin: 1.5rem 0;
+}
+.info-box p { font-size: 0.95rem; margin-bottom: 0; }
+
+/* CONTACT BLOCK */
+.titolare-block {
+  background: var(--fumo-chiaro);
+  border: 1px solid var(--oro-sottile);
+  padding: 2rem 2.5rem;
+  margin-top: 1.5rem;
+}
+.titolare-block h4 {
+  font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.28em;
+  color: var(--oro); margin-bottom: 1rem;
+}
+.titolare-block p {
+  font-size: 0.95rem; color: rgba(234,217,187,0.65);
+  line-height: 1.85; margin-bottom: 0;
+}
+
+/* FOOTER */
+.pp-footer {
+  border-top: 1px solid var(--oro-sottile);
+  padding: 3rem 4rem;
+  text-align: center;
+}
+.pp-footer p {
+  font-family: 'Cinzel', serif; font-size: 0.56rem;
+  letter-spacing: 0.15em; color: rgba(245,237,216,0.2);
+}
+
+@media (max-width: 768px) {
+  .nav { padding: 1rem 1.5rem; }
+  .pp-hero { padding: 9rem 1.5rem 3rem; }
+  .pp-wrap { padding: 3rem 1.5rem 5rem; }
+  .pp-index ol { grid-template-columns: 1fr; }
+  .pp-footer { padding: 2rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Navigazione">
+  <a href="/" class="nav-brand" aria-label="Torna alla homepage">La Ginestrella</a>
+  <a href="/" class="nav-back" aria-label="Torna alla homepage">← Torna al sito</a>
+</nav>
+
+<main>
+<!-- HERO -->
+<div class="pp-hero">
+  <p class="pp-label">Documenti Legali</p>
+  <h1>Privacy <em>Policy</em></h1>
+  <p class="pp-meta">
+    Ultima revisione: Maggio 2026 &nbsp;·&nbsp;
+    Ai sensi del Regolamento UE 2016/679 (GDPR) e del D.Lgs. 196/2003 e s.m.i.
+  </p>
+</div>
+
+<!-- CONTENT -->
+<div class="pp-wrap">
+
+  <!-- INDEX -->
+  <div class="pp-index">
+    <h3>Indice</h3>
+    <ol>
+      <li><a href="#titolare">Titolare del Trattamento</a></li>
+      <li><a href="#dati">Dati Raccolti</a></li>
+      <li><a href="#finalita">Finalità e Base Giuridica</a></li>
+      <li><a href="#conservazione">Conservazione</a></li>
+      <li><a href="#terze-parti">Terze Parti</a></li>
+      <li><a href="#cookie">Cookie</a></li>
+      <li><a href="#diritti">Diritti dell'Interessato</a></li>
+      <li><a href="#minori">Minori</a></li>
+      <li><a href="#modifiche">Modifiche</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. TITOLARE -->
+  <div class="pp-section" id="titolare">
+    <h2><span class="num">01</span> Titolare del Trattamento</h2>
+    <div class="titolare-block">
+      <h4>Titolare</h4>
+      <p>
+        <strong>Ristorante La Ginestrella</strong><br>
+        Frazione Cella, 32 – 27057 Varzi (PV), Italia<br>
+        Telefono: <a href="tel:+390383521050">0383 52150</a><br>
+        WhatsApp: <a href="https://wa.me/393518640002" target="_blank" rel="noopener">351 8640002</a><br>
+        [<em>ristginestrella@libero.it</em>]<br>
+        [<em>012038440184</em>]
+      </p>
+    </div>
+    <p style="margin-top:1.2rem;">Il Titolare del Trattamento è la persona fisica o giuridica che determina le finalità e i mezzi del trattamento dei dati personali. Per qualsiasi questione relativa al trattamento dei tuoi dati puoi contattarci agli recapiti indicati sopra.</p>
+  </div>
+
+  <!-- 2. DATI RACCOLTI -->
+  <div class="pp-section" id="dati">
+    <h2><span class="num">02</span> Dati Raccolti</h2>
+    <p>Il sito <strong>www.laginestrella.it</strong> non raccoglie autonomamente dati personali tramite form o registrazioni. I dati possono essere trattati nelle seguenti circostanze:</p>
+
+    <p><strong>Navigazione del sito</strong><br>
+    Come tutti i siti web, durante la navigazione i server possono registrare automaticamente dati tecnici come indirizzo IP, tipo di browser, sistema operativo, pagine visitate e orari di accesso. Questi dati sono utilizzati esclusivamente per finalità tecniche e statistiche aggregate e non consentono l'identificazione diretta dell'utente.</p>
+
+    <p><strong>Prenotazioni online (Plateform)</strong><br>
+    Il sistema di prenotazione online è gestito dalla piattaforma <strong>Plateform</strong> (plateform.app), soggetto terzo autonomo. I dati forniti in fase di prenotazione (nome, cognome, numero di persone, data, contatti) sono trattati da Plateform secondo la propria informativa privacy. Ti invitiamo a consultarla prima di procedere alla prenotazione.</p>
+
+    <p><strong>Contatto via WhatsApp e telefono</strong><br>
+    Se ci contatti tramite WhatsApp (351 8640002) o telefono (0383 52150) per prenotare un tavolo, richiedere una gift card o iscriverti alle novità, i tuoi dati di contatto (numero di telefono, nome) vengono trattati esclusivamente per evadere la tua richiesta e, se hai espresso consenso, per inviarti aggiornamenti sul menù ed eventi.</p>
+
+    <p><strong>Gift Card</strong><br>
+    La richiesta e l'acquisto di gift card avviene tramite WhatsApp. I dati forniti (nome, numero di telefono, eventuale indirizzo email) vengono utilizzati esclusivamente per emettere e consegnare la gift card richiesta e per gestire eventuali comunicazioni correlate.</p>
+
+    <p><strong>Iscrizione alle novità (Newsletter WhatsApp)</strong><br>
+    Se ti iscrivi per ricevere il menù settimanale e gli aggiornamenti sugli eventi, il tuo numero WhatsApp viene inserito in una lista di contatti gestita manualmente dal titolare. Non utilizziamo piattaforme di marketing automation. Puoi cancellarti in qualsiasi momento rispondendo "STOP" a qualsiasi messaggio ricevuto.</p>
+  </div>
+
+  <!-- 3. FINALITÀ -->
+  <div class="pp-section" id="finalita">
+    <h2><span class="num">03</span> Finalità e Base Giuridica</h2>
+    <ul>
+      <li><strong>Gestione delle prenotazioni</strong> — Base giuridica: esecuzione di un contratto (Art. 6.1.b GDPR)</li>
+      <li><strong>Risposta a richieste di contatto</strong> — Base giuridica: esecuzione di un contratto / interesse legittimo (Art. 6.1.b e 6.1.f GDPR)</li>
+      <li><strong>Invio menù settimanale ed eventi (newsletter WhatsApp)</strong> — Base giuridica: consenso esplicito (Art. 6.1.a GDPR). Il consenso può essere revocato in qualsiasi momento.</li>
+      <li><strong>Emissione di gift card</strong> — Base giuridica: esecuzione di un contratto (Art. 6.1.b GDPR)</li>
+      <li><strong>Finalità tecniche e di sicurezza del sito</strong> — Base giuridica: interesse legittimo (Art. 6.1.f GDPR)</li>
+    </ul>
+    <div class="info-box">
+      <p>Non utilizziamo i tuoi dati per profilazione, marketing automatizzato, vendita a terzi o decisioni automatizzate che producano effetti giuridici significativi.</p>
+    </div>
+  </div>
+
+  <!-- 4. CONSERVAZIONE -->
+  <div class="pp-section" id="conservazione">
+    <h2><span class="num">04</span> Conservazione dei Dati</h2>
+    <p>I dati vengono conservati per il tempo strettamente necessario alle finalità per cui sono stati raccolti:</p>
+    <ul>
+      <li><strong>Dati di prenotazione:</strong> conservati per il tempo necessario alla gestione del rapporto e per obblighi fiscali/contabili (fino a 10 anni ai sensi della normativa fiscale italiana)</li>
+      <li><strong>Contatti newsletter WhatsApp:</strong> fino alla revoca del consenso (invio messaggio "STOP")</li>
+      <li><strong>Dati gift card:</strong> per la durata di validità della gift card e per i successivi obblighi contabili</li>
+      <li><strong>Log di navigazione:</strong> non oltre 12 mesi dalla raccolta</li>
+    </ul>
+  </div>
+
+  <!-- 5. TERZE PARTI -->
+  <div class="pp-section" id="terze-parti">
+    <h2><span class="num">05</span> Terze Parti e Trasferimento Dati</h2>
+    <p>Il sito utilizza i seguenti servizi di terze parti che possono trattare dati degli utenti:</p>
+    <ul>
+      <li><strong>Google Maps Embed</strong> — per visualizzare la mappa nella sezione contatti. Google può raccogliere dati in base alla propria <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</li>
+      <li><strong>Google Fonts</strong> — per il caricamento dei caratteri tipografici. Google può raccogliere dati in base alla propria privacy policy.</li>
+      <li><strong>Plateform (plateform.app)</strong> — sistema di prenotazione online. I dati forniti sono trattati da Plateform in qualità di titolare autonomo.</li>
+      <li><strong>WhatsApp (Meta Platforms)</strong> — utilizzato per prenotazioni, gift card e newsletter. Il trattamento avviene secondo le condizioni di Meta/WhatsApp.</li>
+      <li><strong>GitHub Pages</strong> — le immagini del sito sono ospitate su GitHub. GitHub può raccogliere dati tecnici di accesso secondo la propria privacy policy.</li>
+    </ul>
+    <p>I dati non vengono venduti, ceduti o comunicati a soggetti terzi per finalità di marketing di terze parti. Non avvengono trasferimenti di dati verso Paesi extra-UE al di fuori di quanto previsto dagli accordi standard approvati dalla Commissione Europea.</p>
+  </div>
+
+  <!-- 6. COOKIE -->
+  <div class="pp-section" id="cookie">
+    <h2><span class="num">06</span> Cookie</h2>
+    <p>Il sito <strong>www.laginestrella.it</strong> non utilizza cookie di profilazione propri né cookie di terze parti a fini pubblicitari.</p>
+    <p>Possono essere presenti <strong>cookie tecnici</strong> strettamente necessari al funzionamento del sito (es. preferenze di navigazione), non soggetti all'obbligo di consenso ai sensi del Provvedimento Garante 8 maggio 2014 e delle Linee Guida Cookie 2021.</p>
+    <p>L'integrazione di <strong>Google Maps</strong> e <strong>Google Fonts</strong> può comportare l'utilizzo di cookie da parte di Google secondo le proprie politiche. Puoi gestire le preferenze cookie tramite le impostazioni del tuo browser.</p>
+    <div class="info-box">
+      <p>Il sito non utilizza Google Analytics né altri sistemi di tracciamento comportamentale degli utenti.</p>
+    </div>
+  </div>
+
+  <!-- 7. DIRITTI -->
+  <div class="pp-section" id="diritti">
+    <h2><span class="num">07</span> Diritti dell'Interessato</h2>
+    <p>Ai sensi degli articoli 15-22 del GDPR, hai il diritto di:</p>
+    <ul>
+      <li><strong>Accesso</strong> — ottenere conferma se siano o meno in corso trattamenti di dati che ti riguardano e, in tal caso, accedere alle informazioni (Art. 15)</li>
+      <li><strong>Rettifica</strong> — richiedere la correzione di dati inesatti o l'integrazione di dati incompleti (Art. 16)</li>
+      <li><strong>Cancellazione ("diritto all'oblio")</strong> — richiedere la cancellazione dei tuoi dati personali, salvo obbligo di conservazione (Art. 17)</li>
+      <li><strong>Limitazione del trattamento</strong> — richiedere la limitazione del trattamento in specifici casi (Art. 18)</li>
+      <li><strong>Portabilità</strong> — ricevere i tuoi dati in formato strutturato e leggibile (Art. 20)</li>
+      <li><strong>Opposizione</strong> — opporti al trattamento per motivi legittimi (Art. 21)</li>
+      <li><strong>Revoca del consenso</strong> — revocare in qualsiasi momento il consenso prestato, senza pregiudicare la liceità del trattamento precedente (Art. 7)</li>
+    </ul>
+    <p>Per esercitare questi diritti puoi contattarci tramite WhatsApp al <a href="https://wa.me/393518640002">351 8640002</a>, per telefono allo <a href="tel:+390383521050">0383 52150</a> oppure recandoti presso il ristorante. Risponderemo entro 30 giorni dalla richiesta.</p>
+    <p>Hai inoltre il diritto di proporre reclamo al <strong>Garante per la Protezione dei Dati Personali</strong> (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a>), Piazza Venezia 11 – 00187 Roma.</p>
+  </div>
+
+  <!-- 8. MINORI -->
+  <div class="pp-section" id="minori">
+    <h2><span class="num">08</span> Minori</h2>
+    <p>Il sito non è destinato a minori di 16 anni e non raccoglie consapevolmente dati personali di minori. Se ritieni che dati di un minore siano stati forniti senza il consenso del genitore o tutore, ti invitiamo a contattarci per richiederne la cancellazione.</p>
+  </div>
+
+  <!-- 9. MODIFICHE -->
+  <div class="pp-section" id="modifiche">
+    <h2><span class="num">09</span> Modifiche alla Privacy Policy</h2>
+    <p>Il Titolare si riserva il diritto di modificare la presente informativa in qualsiasi momento per adeguarla a eventuali modifiche normative o a variazioni nelle modalità di trattamento. Le modifiche saranno pubblicate su questa pagina con indicazione della data di aggiornamento. Ti invitiamo a consultare periodicamente questa pagina.</p>
+    <p>La versione attualmente in vigore è quella datata <strong>Maggio 2026</strong>.</p>
+  </div>
+
+  <!-- 10. CONTATTI -->
+  <div class="pp-section" id="contatti">
+    <h2><span class="num">10</span> Contatti</h2>
+    <p>Per qualsiasi domanda relativa al trattamento dei tuoi dati personali o per esercitare i tuoi diritti:</p>
+    <div class="titolare-block">
+      <h4>Contatti Privacy</h4>
+      <p>
+        <strong>Ristorante La Ginestrella</strong><br>
+        Frazione Cella, 32 – 27057 Varzi (PV)<br>
+        📞 <a href="tel:+390383521050">0383 52150</a><br>
+        💬 WhatsApp: <a href="https://wa.me/393518640002" target="_blank" rel="noopener">351 8640002</a>
+      </p>
+    </div>
+  </div>
+
+</div><!-- end pp-wrap -->
+</main>
+
+<!-- FOOTER -->
+<footer class="pp-footer">
+  <p>© 2026 Ristorante La Ginestrella · Frazione Cella 32, Varzi (PV) · Privacy Policy · Tutti i diritti riservati</p>
+</footer>
+
+</body>
+</html>
