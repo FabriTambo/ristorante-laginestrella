@@ -1,11 +1,19 @@
-User-agent: *
-Allow: /
+# robots.txt — Ristorante La Ginestrella
+# https://www.ristorantelaginestrella.it/
 
-# Blocca aree tecniche WordPress (se presenti)
-Disallow: /wp-admin/
-Disallow: /wp-login.php
-Disallow: /wp-json/
-Disallow: /xmlrpc.php
+User-agent: *
+
+# Pagine indicizzabili
+Allow: /
+Allow: /privacy-policy
+
+# Pagine QR / uso interno — non indicizzare
+Disallow: /qr-welcome
+Disallow: /domenica
+Disallow: /menu-pesce
+Disallow: /vini
+Disallow: /quattro-province
+Disallow: /guida-gift-card
 
 # Sitemap
-Sitemap: https://ristorantelaginestrella.it/sitemap.xml
+Sitemap: https://www.ristorantelaginestrella.it/sitemap.xml
