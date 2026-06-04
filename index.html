@@ -1257,11 +1257,108 @@ footer::before {
   .hero-bg { transform: none !important; }
   .gin-reveal { opacity: 1; transform: none; }
 }
+
+/* ═══════════════════════════════════════
+   POPUP AVVISO CHIUSURA
+═══════════════════════════════════════ */
+.avviso-overlay{
+  position:fixed; inset:0; z-index:5000;
+  background:rgba(10,7,4,0.72); backdrop-filter:blur(5px);
+  display:flex; align-items:center; justify-content:center; padding:1.5rem;
+  opacity:0; pointer-events:none; transition:opacity 0.5s ease;
+}
+.avviso-overlay.show{ opacity:1; pointer-events:auto; }
+.avviso-box{
+  position:relative; max-width:460px; width:100%;
+  background:
+    radial-gradient(ellipse 90% 60% at 80% 12%, rgba(184,135,42,0.16), transparent 60%),
+    linear-gradient(150deg, #1A120D 0%, #2E2016 55%, #5C3A1E 120%);
+  border:1px solid rgba(184,135,42,0.4); padding:3rem 2.6rem 2.6rem;
+  text-align:center; box-shadow:0 30px 80px rgba(0,0,0,0.6);
+  transform:translateY(24px) scale(0.96);
+  transition:transform 0.55s cubic-bezier(0.16,1,0.3,1);
+}
+.avviso-overlay.show .avviso-box{ transform:translateY(0) scale(1); }
+.avviso-box::before{ content:''; position:absolute; inset:8px; border:1px solid rgba(184,135,42,0.18); pointer-events:none; }
+.avviso-close{
+  position:absolute; top:0.9rem; right:1.1rem; background:none; border:none; cursor:pointer;
+  font-family:'Cormorant Garamond',serif; font-size:2rem; line-height:1;
+  color:rgba(245,237,216,0.5); transition:color 0.3s; z-index:2;
+}
+.avviso-close:hover{ color:var(--oro-chiaro); }
+.avviso-sprig{ margin:0 auto 1.1rem; }
+.avviso-eyebrow{ font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.34em; color:var(--oro); margin-bottom:0.9rem; }
+.avviso-titolo{ font-family:'Cormorant Garamond',serif; font-weight:300; font-size:1.85rem; color:var(--bianco-caldo); line-height:1.2; }
+.avviso-titolo em{ font-style:italic; color:var(--oro-chiaro); }
+.avviso-blocco{ margin-top:1.6rem; }
+.avviso-blocco + .avviso-blocco{ margin-top:1.4rem; padding-top:1.4rem; border-top:1px solid rgba(184,135,42,0.18); }
+.avviso-data{ font-family:'Cinzel',serif; font-size:0.7rem; letter-spacing:0.2em; color:var(--oro); margin-bottom:0.6rem; }
+.avviso-testo{ font-size:1.05rem; line-height:1.65; font-weight:300; color:rgba(245,237,216,0.78); font-style:italic; max-width:340px; margin:0 auto; }
+.avviso-testo strong{ font-style:normal; color:var(--crema); font-weight:400; }
+.avviso-divider{ height:1px; width:70px; margin:1.8rem auto; background:linear-gradient(to right,transparent,rgba(184,135,42,0.6),transparent); }
+.avviso-btn{ display:inline-block; background:var(--oro); color:var(--fumo); font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.2em; padding:0.9rem 2.2rem; text-decoration:none; cursor:pointer; border:none; transition:background 0.3s, transform 0.25s; }
+.avviso-btn:hover{ background:var(--oro-chiaro); transform:translateY(-2px); }
+@media (max-width:480px){
+  .avviso-box{ padding:2.4rem 1.6rem 2rem; }
+  .avviso-titolo{ font-size:1.55rem; }
+}
 </style>
 </head>
 
 <body>
 <a class="skip-link" href="#menu-principale">Vai al contenuto principale</a>
+
+<!-- ===== POPUP AVVISO CHIUSURA (auto-scadenza 21 giugno) ===== -->
+<div class="avviso-overlay" id="avviso-chiusura" role="dialog" aria-modal="true" aria-label="Avvisi di chiusura straordinaria">
+  <div class="avviso-box">
+    <button class="avviso-close" onclick="chiudiAvviso()" aria-label="Chiudi avviso">&times;</button>
+    <svg class="avviso-sprig" width="64" height="48" viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g fill="none" stroke="#B8872A" stroke-width="3" stroke-linecap="round">
+        <path d="M60 88 C60 70 57 60 54 50 C51 40 53 30 60 24"/>
+        <path d="M60 64 C70 56 78 50 86 40"/>
+        <path d="M56 52 C46 46 38 40 32 32"/>
+      </g>
+      <g fill="#D4A843">
+        <ellipse cx="30" cy="30" rx="9" ry="6" transform="rotate(-30 30 30)"/>
+        <ellipse cx="22" cy="40" rx="8" ry="5.5" transform="rotate(-15 22 40)"/>
+        <ellipse cx="88" cy="42" rx="9" ry="6.5" transform="rotate(55 88 42)"/>
+        <ellipse cx="78" cy="16" rx="8.5" ry="6" transform="rotate(25 78 16)"/>
+      </g>
+    </svg>
+    <div class="avviso-eyebrow">AVVISI</div>
+    <h2 class="avviso-titolo">Chiusure <em>straordinarie</em></h2>
+
+    <div class="avviso-blocco">
+      <div class="avviso-data">SABATO 6 GIUGNO · SERA</div>
+      <p class="avviso-testo">Resteremo chiusi <strong>alla sera</strong> per un evento privato. Il <strong>pranzo</strong> si svolgerà regolarmente.</p>
+    </div>
+
+    <div class="avviso-blocco">
+      <div class="avviso-data">FERIE · 16 – 20 GIUGNO</div>
+      <p class="avviso-testo">Resteremo chiusi per ferie da <strong>martedì 16</strong> a <strong>sabato 20 giugno</strong>. Vi aspettiamo di nuovo <strong>domenica 21 giugno</strong>.</p>
+    </div>
+
+    <div class="avviso-divider"></div>
+    <button class="avviso-btn" onclick="chiudiAvviso()">Ho capito</button>
+  </div>
+</div>
+<script>
+(function(){
+  /* Il pop-up sparisce automaticamente da questa data (giorno di riapertura) */
+  var scadenza = new Date('2026-06-21T00:00:00+02:00');
+  var oggi = new Date();
+  var overlay = document.getElementById('avviso-chiusura');
+  if (overlay && oggi < scadenza) {
+    setTimeout(function(){ overlay.classList.add('show'); }, 900);
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') chiudiAvviso(); });
+    overlay.addEventListener('click', function(e){ if (e.target === overlay) chiudiAvviso(); });
+  }
+})();
+function chiudiAvviso(){
+  var o = document.getElementById('avviso-chiusura');
+  if (o) o.classList.remove('show');
+}
+</script>
 
 <!-- MOBILE MENU -->
 <nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile">
@@ -1997,3 +2094,4 @@ document.querySelectorAll('.gift-option').forEach(function(el) {
 </script>
 </body>
 </html>
+
