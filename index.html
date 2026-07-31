@@ -170,6 +170,21 @@ section{padding:4.5rem 0}
 .avviso p{font-size:1.05rem;color:var(--testo)}
 .popup .btn{width:100%;text-align:center;margin-top:.4rem}
 
+/* ── Popup evento in evidenza (stile impatto) ───────── */
+.popup-evento{max-width:440px;text-align:center;background:linear-gradient(160deg,var(--fumo-3),var(--fumo-2));overflow:hidden}
+.popup-evento::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,transparent,var(--oro-chiaro),transparent)}
+.avviso.avviso-hero{border-left:none;padding:0;margin-bottom:0;text-align:center}
+.avviso-hero .pe-eyebrow{font-family:var(--font-label);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--oro);margin-bottom:.7rem}
+.avviso-hero .pe-title{font-family:var(--font-display);font-size:clamp(2rem,7vw,2.6rem);font-weight:600;color:var(--crema);line-height:1.08;margin-bottom:.5rem}
+.avviso-hero .pe-title em{font-style:italic;color:var(--oro-chiaro)}
+.avviso-hero .pe-data{font-family:var(--font-label);font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--testo);margin-bottom:1.1rem}
+.avviso-hero .pe-prezzo{font-family:var(--font-display);font-size:3rem;font-weight:600;color:var(--oro-chiaro);line-height:1}
+.avviso-hero .pe-prezzo-sub{font-size:1rem;font-style:italic;color:var(--testo-soft);margin-top:.3rem;margin-bottom:1rem}
+.avviso-hero .pe-desc{font-size:1.05rem;font-style:italic;color:var(--testo);max-width:34ch;margin:0 auto}
+.avviso-hero .pe-posti{display:inline-block;margin-top:1rem;font-family:var(--font-label);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--oro);border:1px solid var(--bordo);border-radius:99px;padding:.45rem 1rem}
+.popup-evento .btn-tel-popup{display:block;margin-top:.6rem;font-family:var(--font-label);font-size:.72rem;letter-spacing:.16em;color:var(--testo-soft);text-decoration:none;text-transform:uppercase}
+.popup-evento .btn-tel-popup:hover{color:var(--oro-chiaro)}
+
 /* ── Header ─────────────────────────────────────────── */
 header{position:sticky;top:0;z-index:100;background:rgba(30,21,16,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--bordo)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.25rem;max-width:1240px;margin:0 auto}
@@ -352,24 +367,28 @@ footer{background:#150E0A;border-top:1px solid var(--bordo);padding:3.5rem 0 2re
      Se non resta nessun avviso valido, il popup non appare.
      ════════════════════════════════════════════════════ -->
 <div class="popup-overlay" id="popup-avvisi" role="dialog" aria-modal="true" aria-labelledby="titolo-avvisi">
-  <div class="popup">
-    <button class="chiudi" id="chiudi-avvisi" aria-label="Chiudi avvisi">×</button>
-    <p class="eyebrow">Avvisi</p>
-    <h2 id="titolo-avvisi">Chiusure <em>straordinarie</em></h2>
+  <div class="popup popup-evento">
+    <button class="chiudi" id="chiudi-avvisi" aria-label="Chiudi">×</button>
 
-    <div class="avviso" data-scadenza="2026-06-20">
-      <span class="quando">Ferie · 16 – 20 Giugno</span>
-      <p>Resteremo chiusi per ferie da <strong>martedì 16</strong> a <strong>sabato 20 giugno</strong>. Vi aspettiamo di nuovo <strong>domenica 21 giugno</strong>.</p>
+    <div class="avviso avviso-hero" data-scadenza="2026-08-15">
+      <p class="pe-eyebrow">La Ginestrella · Cella di Varzi</p>
+      <h2 class="pe-title" id="titolo-avvisi">Pranzo di <em>Ferragosto</em></h2>
+      <p class="pe-data">Sabato 15 Agosto · Ore 12.30</p>
+      <div class="pe-prezzo">45€</div>
+      <p class="pe-prezzo-sub">vini in abbinamento e caffè compresi</p>
+      <p class="pe-desc">Un menù completo con i sapori dell'Oltrepò, nella tradizione de La Ginestrella.</p>
+      <span class="pe-posti">✦ Posti limitati ✦</span>
     </div>
 
-    <!-- Modello per nuovi avvisi (copiare, decommentare e aggiornare data-scadenza):
-    <div class="avviso" data-scadenza="2026-07-15">
+    <!-- Modello per nuovi avvisi/eventi nel popup (copiare, decommentare e aggiornare data-scadenza):
+    <div class="avviso" data-scadenza="2026-09-30">
       <span class="quando">Titolo · Data</span>
       <p>Testo dell'avviso.</p>
     </div>
     -->
 
-    <a href="#" class="btn btn-oro" id="ok-avvisi">Ho capito</a>
+    <a href="https://wa.me/393518640002?text=Vorrei%20prenotare%20per%20il%20pranzo%20di%20Ferragosto" class="btn btn-oro" id="ok-avvisi" target="_blank" rel="noopener">💬 Prenota il tuo tavolo</a>
+    <a href="tel:+39038352150" class="btn-tel-popup">oppure chiama lo 0383 52150</a>
   </div>
 </div>
 
@@ -385,6 +404,7 @@ footer{background:#150E0A;border-top:1px solid var(--bordo);padding:3.5rem 0 2re
       <li><a href="#identita">Il Ristorante</a></li>
       <li><a href="#menu">Menù</a></li>
       <li><a href="#salame">Il Salame</a></li>
+      <li><a href="#eventi">Eventi</a></li>
       <li><a href="#gift">Gift Card</a></li>
       <li><a href="#recensioni">Recensioni</a></li>
       <li><a href="#orari">Contatti</a></li>
@@ -669,9 +689,36 @@ footer{background:#150E0A;border-top:1px solid var(--bordo);padding:3.5rem 0 2re
     <p class="eyebrow">Eventi & Serate Speciali</p>
     <h2 class="section-title">Le nostre <em>serate</em></h2>
 
+    <div class="evento" data-scadenza="2026-08-15">
+      <img src="https://fabritambo.github.io/ristorante-laginestrella/images/locandina-ferragosto.jpg" alt="Locandina Pranzo di Ferragosto – Ristorante La Ginestrella, 15 Agosto 2026" loading="lazy" width="800" height="1000">
+      <div class="info">
+        <p class="eyebrow">In Evidenza</p>
+        <h3>Pranzo di Ferragosto<br>Sabato 15 Agosto 2026</h3>
+        <p>Ore 12.30 · Il pranzo di Ferragosto nella tradizione de La Ginestrella: un menù completo con i sapori dell'Oltrepò. Posti limitati, prenotazione consigliata.</p>
+        <p class="prezzo-evento">45€ con vini in abbinamento e caffè compresi</p>
+        <div class="cta" style="display:flex;gap:.8rem;flex-wrap:wrap">
+          <a class="btn btn-wa" href="https://wa.me/393518640002?text=Vorrei%20prenotare%20per%20il%20pranzo%20di%20Ferragosto">💬 Prenota su WhatsApp</a>
+          <a class="btn btn-ghost" href="tel:+39038352150">📞 0383 52150</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="evento" data-scadenza="2026-08-28">
+      <img src="https://fabritambo.github.io/ristorante-laginestrella/images/locandina-cena-antipasti.jpg" alt="Locandina La Cena degli Antipasti – Ristorante La Ginestrella, 28 Agosto 2026" loading="lazy" width="800" height="1000">
+      <div class="info">
+        <p class="eyebrow">Serata a Tema</p>
+        <h3>La Cena degli Antipasti<br>Venerdì 28 Agosto 2026</h3>
+        <p>Ore 20.30 · Una serata interamente dedicata all'arte dell'antipasto: assaggi, sapori e sorprese dalla nostra cucina, da vivere a tavola tra amici. Posti limitati.</p>
+        <div class="cta" style="display:flex;gap:.8rem;flex-wrap:wrap">
+          <a class="btn btn-wa" href="https://wa.me/393518640002?text=Vorrei%20prenotare%20per%20la%20Cena%20degli%20Antipasti">💬 Prenota su WhatsApp</a>
+          <a class="btn btn-ghost" href="tel:+39038352150">📞 0383 52150</a>
+        </div>
+      </div>
+    </div>
+
     <!-- Modello per il prossimo evento (copiare, decommentare e aggiornare):
     <div class="evento" data-scadenza="2026-07-25">
-      <img src="https://raw.githubusercontent.com/Fabritambo/ristorante-laginestrella/main/images/NOME_LOCANDINA.jpeg" alt="Locandina evento – Ristorante La Ginestrella" loading="lazy" width="800" height="1000">
+      <img src="https://fabritambo.github.io/ristorante-laginestrella/images/NOME_LOCANDINA.jpg" alt="Locandina evento – Ristorante La Ginestrella" loading="lazy" width="800" height="1000">
       <div class="info">
         <p class="eyebrow">Prossimo Evento</p>
         <h3>Titolo dell'evento<br>Sabato XX Mese 2026</h3>
@@ -830,6 +877,7 @@ footer{background:#150E0A;border-top:1px solid var(--bordo);padding:3.5rem 0 2re
           <li><a href="#identita">Il Ristorante</a></li>
           <li><a href="#menu">Il Nostro Menù</a></li>
           <li><a href="#salame">Il Salame</a></li>
+          <li><a href="#eventi">Eventi</a></li>
           <li><a href="#gift">Gift Card</a></li>
           <li><a href="#newsletter">Newsletter</a></li>
           <li><a href="#recensioni">Recensioni</a></li>
@@ -891,7 +939,12 @@ footer{background:#150E0A;border-top:1px solid var(--bordo);padding:3.5rem 0 2re
     try{ localStorage.setItem(chiave,'1'); }catch(err){}
   }
   document.getElementById('chiudi-avvisi').addEventListener('click', chiudiPopup);
-  document.getElementById('ok-avvisi').addEventListener('click', chiudiPopup);
+  document.getElementById('ok-avvisi').addEventListener('click', function(e){
+    /* Non blocchiamo la navigazione: il link apre WhatsApp in una nuova scheda,
+       qui ci limitiamo a segnare il popup come "visto" e a chiuderlo. */
+    overlay.classList.remove('visibile');
+    try{ localStorage.setItem(chiave,'1'); }catch(err){}
+  });
   overlay.addEventListener('click', function(e){ if(e.target === overlay) chiudiPopup(); });
 
   /* ── Eventi: nascondi automaticamente quelli passati ── */
