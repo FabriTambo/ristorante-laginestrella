@@ -77,6 +77,9 @@
     { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "12:00", "closes": "14:30" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "19:30", "closes": "22:00" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "15:00" }
+  ],
+  "specialOpeningHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "validFrom": "2026-09-07", "validThrough": "2026-09-14", "opens": "00:00", "closes": "00:00" }
   ]
 }
 </script>
@@ -169,6 +172,7 @@ section{padding:4.5rem 0}
 .avviso .quando{font-family:var(--font-label);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--oro);display:block;margin-bottom:.25rem}
 .avviso p{font-size:1.05rem;color:var(--testo)}
 .popup .btn{width:100%;text-align:center;margin-top:.4rem}
+.popup button.btn{border:none;cursor:pointer;font-family:var(--font-label)}
 
 /* ── Popup evento in evidenza (stile impatto) ───────── */
 .popup-evento{max-width:440px;text-align:center;background:linear-gradient(160deg,var(--fumo-3),var(--fumo-2));overflow:hidden}
@@ -201,6 +205,10 @@ header{position:sticky;top:0;z-index:100;background:rgba(30,21,16,.94);backdrop-
   .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--fumo-2);flex-direction:column;padding:1.2rem;gap:1rem;border-bottom:1px solid var(--bordo)}
   .nav-links.aperto{display:flex}
 }
+
+/* ── Banner chiusura (sotto l'header) ───────────────── */
+.banner-chiusura{background:var(--fumo-3);border-bottom:1px solid var(--bordo);text-align:center;padding:.9rem 1.25rem}
+.banner-chiusura p{font-family:var(--font-label);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--oro-chiaro)}
 
 /* ── Hero ───────────────────────────────────────────── */
 .hero{position:relative;min-height:88vh;display:flex;align-items:center;background:
@@ -332,6 +340,8 @@ blockquote footer{font-family:var(--font-label);font-style:normal;font-size:.78r
 .orari-tab{width:100%;border-collapse:collapse;margin:1.4rem 0 2rem}
 .orari-tab td{padding:.7rem 0;border-bottom:1px dashed rgba(201,162,39,.18);font-size:1.1rem}
 .orari-tab td:last-child{text-align:right;color:var(--crema)}
+.nota-chiusura{border:1px solid var(--bordo);background:var(--fumo-2);border-radius:3px;padding:1.1rem 1.3rem;margin:-1rem 0 2rem;font-size:1.05rem}
+.nota-chiusura strong{color:var(--oro-chiaro)}
 .contatti-btn{display:flex;flex-direction:column;gap:.8rem}
 .mappa{border:1px solid var(--bordo);border-radius:3px;overflow:hidden}
 .mappa iframe{width:100%;height:420px;border:0;display:block}
@@ -370,14 +380,12 @@ footer{background:#150E0A;border-top:1px solid var(--bordo);padding:3.5rem 0 2re
   <div class="popup popup-evento">
     <button class="chiudi" id="chiudi-avvisi" aria-label="Chiudi">×</button>
 
-    <div class="avviso avviso-hero" data-scadenza="2026-08-15">
+    <div class="avviso avviso-hero" data-scadenza="2026-09-14">
       <p class="pe-eyebrow">La Ginestrella · Cella di Varzi</p>
-      <h2 class="pe-title" id="titolo-avvisi">Pranzo di <em>Ferragosto</em></h2>
-      <p class="pe-data">Sabato 15 Agosto · Ore 12.30</p>
-      <div class="pe-prezzo">45€</div>
-      <p class="pe-prezzo-sub">vini in abbinamento e caffè compresi</p>
-      <p class="pe-desc">Un menù completo con i sapori dell'Oltrepò, nella tradizione de La Ginestrella.</p>
-      <span class="pe-posti">✦ Posti limitati ✦</span>
+      <h2 class="pe-title" id="titolo-avvisi">Chiuso per <em>ferie</em></h2>
+      <p class="pe-data">Da lunedì 7 a lunedì 14 Settembre</p>
+      <p class="pe-desc">Il ristorante resterà chiuso per una breve pausa. Vi aspettiamo da martedì 15 Settembre.</p>
+      <span class="pe-posti">✦ Prenotazioni sempre aperte ✦</span>
     </div>
 
     <!-- Modello per nuovi avvisi/eventi nel popup (copiare, decommentare e aggiornare data-scadenza):
@@ -387,7 +395,7 @@ footer{background:#150E0A;border-top:1px solid var(--bordo);padding:3.5rem 0 2re
     </div>
     -->
 
-    <a href="https://wa.me/393518640002?text=Vorrei%20prenotare%20per%20il%20pranzo%20di%20Ferragosto" class="btn btn-oro" id="ok-avvisi" target="_blank" rel="noopener">💬 Prenota il tuo tavolo</a>
+    <a href="https://wa.me/393518640002?text=Ciao!%20Vorrei%20prenotare%20un%20tavolo%20a%20La%20Ginestrella" class="btn btn-oro" id="ok-avvisi" target="_blank" rel="noopener">💬 Prenota per le prossime date</a>
     <a href="tel:+39038352150" class="btn-tel-popup">oppure chiama lo 0383 52150</a>
   </div>
 </div>
@@ -412,6 +420,11 @@ footer{background:#150E0A;border-top:1px solid var(--bordo);padding:3.5rem 0 2re
     </ul>
   </nav>
 </header>
+
+<!-- ── Banner chiusura (stessa auto-scadenza del popup) ─ -->
+<div class="banner-chiusura" data-scadenza="2026-09-14">
+  <p>✦ Chiusi per ferie da lunedì 7 a lunedì 14 Settembre · Riapertura martedì 15 ✦</p>
+</div>
 
 <main>
 
@@ -579,7 +592,7 @@ footer{background:#150E0A;border-top:1px solid var(--bordo);padding:3.5rem 0 2re
           <li>Salame di Varzi di nostra produzione</li>
           <li>Coppa Piacentina DOP</li>
           <li>Cestino croccante con insalata russa</li>
-          <li>Farinata con lardo,stracchino e nocciole</li>
+          <li>Farinata con lardo, stracchino e nocciole</li>
           <li>Cremoso al tonno</li>
           <li>Formaggio al cartoccio</li>
         </ul>
@@ -603,7 +616,7 @@ footer{background:#150E0A;border-top:1px solid var(--bordo);padding:3.5rem 0 2re
         <span class="icona">🍖</span>
         <h3>Il Secondo al Forno</h3>
         <ul>
-          <li>Coppa dell'Oltrepo al forno con patate al rosmarino</li>
+          <li>Coppa dell'Oltrepò al forno con patate al rosmarino</li>
         </ul>
       </div>
       <div class="portata">
@@ -686,35 +699,8 @@ footer{background:#150E0A;border-top:1px solid var(--bordo);padding:3.5rem 0 2re
     <p class="eyebrow">Eventi & Serate Speciali</p>
     <h2 class="section-title">Le nostre <em>serate</em></h2>
 
-    <div class="evento" data-scadenza="2026-08-15">
-      <img src="https://fabritambo.github.io/ristorante-laginestrella/images/locandina-ferragosto-2026.jpg" alt="Locandina Pranzo di Ferragosto – Ristorante La Ginestrella, 15 Agosto 2026" loading="lazy" width="800" height="1000">
-      <div class="info">
-        <p class="eyebrow">In Evidenza</p>
-        <h3>Pranzo di Ferragosto<br>Sabato 15 Agosto 2026</h3>
-        <p>Ore 12.30 · Il pranzo di Ferragosto nella tradizione de La Ginestrella: un menù completo con i sapori dell'Oltrepò. Posti limitati, prenotazione consigliata.</p>
-        <p class="prezzo-evento">45€ con vini in abbinamento e caffè compresi</p>
-        <div class="cta" style="display:flex;gap:.8rem;flex-wrap:wrap">
-          <a class="btn btn-wa" href="https://wa.me/393518640002?text=Vorrei%20prenotare%20per%20il%20pranzo%20di%20Ferragosto">💬 Prenota su WhatsApp</a>
-          <a class="btn btn-ghost" href="tel:+39038352150">📞 0383 52150</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="evento" data-scadenza="2026-08-28">
-      <img src="https://fabritambo.github.io/ristorante-laginestrella/images/locandina-cena-antipasti-2026.jpg" alt="Locandina La Cena degli Antipasti – Ristorante La Ginestrella, 28 Agosto 2026" loading="lazy" width="800" height="1000">
-      <div class="info">
-        <p class="eyebrow">Serata a Tema</p>
-        <h3>La Cena degli Antipasti<br>Venerdì 28 Agosto 2026</h3>
-        <p>Ore 20.30 · Una serata interamente dedicata all'arte dell'antipasto: assaggi, sapori e sorprese dalla nostra cucina, da vivere a tavola tra amici. Posti limitati.</p>
-        <div class="cta" style="display:flex;gap:.8rem;flex-wrap:wrap">
-          <a class="btn btn-wa" href="https://wa.me/393518640002?text=Vorrei%20prenotare%20per%20la%20Cena%20degli%20Antipasti">💬 Prenota su WhatsApp</a>
-          <a class="btn btn-ghost" href="tel:+39038352150">📞 0383 52150</a>
-        </div>
-      </div>
-    </div>
-
     <!-- Modello per il prossimo evento (copiare, decommentare e aggiornare):
-    <div class="evento" data-scadenza="2026-07-25">
+    <div class="evento" data-scadenza="2026-10-31">
       <img src="https://fabritambo.github.io/ristorante-laginestrella/images/NOME_LOCANDINA.jpg" alt="Locandina evento – Ristorante La Ginestrella" loading="lazy" width="800" height="1000">
       <div class="info">
         <p class="eyebrow">Prossimo Evento</p>
@@ -839,6 +825,9 @@ footer{background:#150E0A;border-top:1px solid var(--bordo);padding:3.5rem 0 2re
           <tr><td>Venerdì - Sabato</td><td>12:00 – 14:30 · 19:30 – 22:00</td></tr>
           <tr><td>Domenica</td><td>12:00 – 15:00</td></tr>
         </table>
+        <div class="nota-chiusura" data-scadenza="2026-09-14">
+          <p>✦ <strong>Chiusura per ferie:</strong> da lunedì 7 a lunedì 14 Settembre compresi. Riapriamo martedì 15 Settembre con i consueti orari.</p>
+        </div>
         <div class="contatti-btn">
           <a class="btn btn-oro" href="tel:+39038352150">📞 0383 52150 — Prenota un tavolo</a>
           <a class="btn btn-wa" href="https://wa.me/393518640002">💬 351 8640002 — WhatsApp</a>
@@ -947,6 +936,11 @@ footer{background:#150E0A;border-top:1px solid var(--bordo);padding:3.5rem 0 2re
   /* ── Eventi: nascondi automaticamente quelli passati ── */
   document.querySelectorAll('.evento').forEach(function(ev){
     if(scaduto(ev)) ev.remove();
+  });
+
+  /* ── Banner e note di chiusura: spariscono da soli a scadenza ── */
+  document.querySelectorAll('.banner-chiusura, .nota-chiusura').forEach(function(el){
+    if(scaduto(el)) el.remove();
   });
 
   /* ── Menu mobile ── */
