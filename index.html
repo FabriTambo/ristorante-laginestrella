@@ -98,7 +98,7 @@
     {
       "@type": "Question",
       "name": "Il ristorante ha la carta o solo il menù fisso?",
-      "acceptedAnswer": { "@type": "Answer", "text": "La Ginestrella propone esclusivamente il nostro menù a prezzo fisso, vini inclusi: non è disponibile la carta. È una scelta deliberata: costruiamo il menù attorno ai migliori prodotti stagionali del territorio, garantendo freschezza e qualità. Il menù è servito all'intero tavolo — un percorso completo e generoso, dagli antipasti al dolce." }
+      "acceptedAnswer": { "@type": "Answer", "text": "La Ginestrella propone esclusivamente menù a prezzo fisso, vino incluso: non è disponibile la carta. È una scelta deliberata: costruiamo il menù attorno ai migliori prodotti stagionali del territorio, garantendo freschezza e qualità. Il menù è servito all'intero tavolo — un percorso completo e generoso, dagli antipasti al dolce." }
     },
     {
       "@type": "Question",
@@ -113,7 +113,7 @@
     {
       "@type": "Question",
       "name": "I vini sono davvero inclusi nel prezzo?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sì. Il prezzo fisso comprende l'intero menù — antipasti misti, due primi, sorbetto, secondo e dolce — più i vini dell'Oltrepò Pavese in abbinamento a ogni portata, acqua e caffè. Dal martedì al sabato è di 40€ a persona; per la domenica e gli eventi speciali il prezzo è indicato nella sezione Eventi." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Sì, nel menù completo: antipasti misti, due primi, sorbetto, secondo e dolce, più i vini dell'Oltrepò Pavese in abbinamento a ogni portata, acqua e caffè. Il sabato a pranzo costa 40€ a persona e gli altri giorni è disponibile su richiesta. Dal martedì al venerdì a pranzo c'è anche il Pranzo in Settimana a 20€, con i piatti del giorno, vino e caffè compresi. Per la domenica e gli eventi speciali il prezzo è indicato nella sezione Eventi." }
     },
     {
       "@type": "Question",
@@ -311,6 +311,13 @@ section{padding:4rem 0}
 .mc-sub{flex:1;min-width:0;font-size:1.08rem;line-height:1.35;color:var(--su-verde)}
 .mc-nota{margin-top:.8rem;font-size:1.06rem;font-style:italic;line-height:1.45;color:var(--su-verde)}
 .mc-nota a{color:var(--oro-chiaro)}
+.settimana-card{display:flex;align-items:center;gap:1rem;margin-top:1.8rem;padding:1.2rem 1.3rem;background:var(--carta);border:1px solid var(--bordo);border-left:4px solid var(--verde);border-radius:10px}
+.sc-testo{flex:1;min-width:0}
+.sc-eye{font-family:var(--font-label);font-weight:600;font-size:.7rem;letter-spacing:.12em;line-height:1.5;text-transform:uppercase;color:var(--oro-c);margin-bottom:.2rem}
+.sc-titolo{font-size:1.7rem;line-height:1.1}
+.sc-sub{margin-top:.3rem;font-size:1.08rem;line-height:1.4;color:var(--testo-2)}
+.sc-prezzo{flex-shrink:0;font-size:2.4rem;font-weight:600;line-height:1;color:var(--oro-c)}
+.settimana-card+.menu-card{margin-top:1rem}
 .portata{padding:1.4rem 0 .2rem}
 .portata-head{display:flex;align-items:center;gap:.55rem;margin-bottom:.3rem}
 .portata-icon{font-size:1.05rem}
@@ -568,7 +575,7 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
   <div class="stats">
     <div class="stat"><strong>1950</strong><span>Anno di fondazione</span></div>
     <div class="stat"><strong>Unico</strong><span>Un solo menù · niente carta</span></div>
-    <div class="stat"><strong>da 40€</strong><span>Vini, acqua e caffè inclusi</span></div>
+    <div class="stat"><strong>da 20€</strong><span>Vino e caffè inclusi</span></div>
     <div class="stat"><strong>650 m</strong><span>Sull'Appennino Pavese</span></div>
   </div>
 </div>
@@ -605,6 +612,16 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
         <p class="intro">Un solo menù, uguale per tutto il tavolo, che segue le stagioni. Non è disponibile la carta.</p>
       </div>
 
+      <!-- PRANZO IN SETTIMANA: i piatti cambiano ogni giorno -->
+      <div class="settimana-card">
+        <div class="sc-testo">
+          <p class="sc-eye">Dal martedì al venerdì · a pranzo</p>
+          <h3 class="sc-titolo">Pranzo in <em>Settimana</em></h3>
+          <p class="sc-sub">Un menù più semplice con i piatti del giorno, che cambiano ogni giorno. Vino e caffè compresi.</p>
+        </div>
+        <span class="sc-prezzo">20€</span>
+      </div>
+
       <!-- MENÙ DEL MOMENTO: aggiornare quando cambia.
            Il dettaglio con gli allergeni è nel menù digitale (bot-ginestrella.onrender.com). -->
       <div class="menu-card">
@@ -612,8 +629,9 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
         <h3 class="mc-titolo">Sapori d'<em>Autunno</em></h3>
         <div class="mc-info">
           <span class="mc-prezzo">40€</span>
-          <span class="mc-sub">a persona, dal martedì al sabato<br>vini in abbinamento, acqua e caffè compresi</span>
+          <span class="mc-sub">a persona, il sabato a pranzo<br>vini in abbinamento, acqua e caffè compresi</span>
         </div>
+        <p class="mc-nota">Gli altri giorni, anche il sabato sera, è disponibile su richiesta al momento della prenotazione.</p>
         <p class="mc-nota" data-scadenza="2026-11-01">La domenica a pranzo: edizione speciale a 45€ — <a href="#eventi">vedi Eventi</a></p>
       </div>
 
@@ -656,7 +674,7 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
       </div>
 
       <div class="menu-note">
-        <p><strong>Formula unica:</strong> La Ginestrella propone esclusivamente il nostro menù a prezzo fisso, <strong>non è disponibile la carta</strong>. Il menù è servito all'intero tavolo. Vini dell'Oltrepò Pavese, acqua e caffè inclusi.</p>
+        <p><strong>Formula unica:</strong> La Ginestrella propone esclusivamente il nostro menù a prezzo fisso, <strong>non è disponibile la carta</strong>. Il menù è servito all'intero tavolo. Vino e caffè sono sempre compresi nel prezzo.</p>
         <p>Per <strong>allergie o intolleranze alimentari</strong> si prega di comunicarlo in fase di prenotazione: siamo lieti di adattare il menù alle vostre esigenze. Gli allergeni di ogni piatto sono indicati nel <a href="https://bot-ginestrella.onrender.com/">menù digitale</a>. Contattaci: <a href="tel:+39038352150">0383 52150</a> o <a href="https://wa.me/393518640002">WhatsApp</a>.</p>
       </div>
 
@@ -934,7 +952,7 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
     <div class="faq-lista">
       <details class="faq-item">
         <summary>Il ristorante ha la carta o solo il menù fisso?</summary>
-        <p class="risposta">La Ginestrella propone esclusivamente il nostro menù a prezzo fisso, vini inclusi: non è disponibile la carta. È una scelta deliberata: costruiamo il menù attorno ai migliori prodotti stagionali del territorio, garantendo freschezza e qualità. Il menù è servito all'intero tavolo — un percorso completo e generoso, dagli antipasti al dolce.</p>
+        <p class="risposta">La Ginestrella propone esclusivamente menù a prezzo fisso, vino incluso: non è disponibile la carta. È una scelta deliberata: costruiamo il menù attorno ai migliori prodotti stagionali del territorio, garantendo freschezza e qualità. Il menù è servito all'intero tavolo — un percorso completo e generoso, dagli antipasti al dolce.</p>
       </details>
       <details class="faq-item">
         <summary>È necessario prenotare?</summary>
@@ -946,7 +964,7 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
       </details>
       <details class="faq-item">
         <summary>I vini sono davvero inclusi nel prezzo?</summary>
-        <p class="risposta">Sì. Il prezzo fisso comprende l'intero menù — antipasti misti, due primi, sorbetto, secondo e dolce — più i vini dell'Oltrepò Pavese in abbinamento a ogni portata, acqua e caffè. Dal martedì al sabato è di 40€ a persona; per la domenica e gli eventi speciali il prezzo è indicato nella sezione <a href="#eventi">Eventi</a>.</p>
+        <p class="risposta">Sì, nel menù completo: antipasti misti, due primi, sorbetto, secondo e dolce, più i vini dell'Oltrepò Pavese in abbinamento a ogni portata, acqua e caffè. Il sabato a pranzo costa 40€ a persona e gli altri giorni è disponibile su richiesta. Dal martedì al venerdì a pranzo c'è anche il Pranzo in Settimana a 20€, con i piatti del giorno, vino e caffè compresi. Per la domenica e gli eventi speciali il prezzo è indicato nella sezione <a href="#eventi">Eventi</a>.</p>
       </details>
       <details class="faq-item">
         <summary>Come funziona la Gift Card?</summary>
