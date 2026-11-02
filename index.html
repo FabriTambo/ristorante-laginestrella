@@ -87,6 +87,41 @@
   ]
 -->
 
+<!-- JSON-LD: eventi (togliere a evento concluso) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FoodEvent",
+      "name": "A pranzo col tartufo",
+      "startDate": "2026-11-15T12:30:00+01:00",
+      "endDate": "2026-11-15T15:00:00+01:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "Menù fisso al tartufo nero: antipasti, due primi, sorbetto, secondo e dolce, con vini in abbinamento e caffè inclusi.",
+      "image": "https://www.ristorantelaginestrella.it/images/a-pranzo-col-tartufo-2026.jpg",
+      "location": { "@type": "Restaurant", "name": "Ristorante La Ginestrella", "address": { "@type": "PostalAddress", "streetAddress": "Frazione Cella, 32", "addressLocality": "Varzi", "addressRegion": "PV", "postalCode": "27057", "addressCountry": "IT" } },
+      "organizer": { "@type": "Organization", "name": "Ristorante La Ginestrella", "url": "https://www.ristorantelaginestrella.it/" },
+      "offers": { "@type": "Offer", "price": "45", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.ristorantelaginestrella.it/#eventi", "validFrom": "2026-11-02" }
+    },
+    {
+      "@type": "FoodEvent",
+      "name": "A pranzo col tartufo",
+      "startDate": "2026-11-22T12:30:00+01:00",
+      "endDate": "2026-11-22T15:00:00+01:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "Menù fisso al tartufo nero: antipasti, due primi, sorbetto, secondo e dolce, con vini in abbinamento e caffè inclusi.",
+      "image": "https://www.ristorantelaginestrella.it/images/a-pranzo-col-tartufo-2026.jpg",
+      "location": { "@type": "Restaurant", "name": "Ristorante La Ginestrella", "address": { "@type": "PostalAddress", "streetAddress": "Frazione Cella, 32", "addressLocality": "Varzi", "addressRegion": "PV", "postalCode": "27057", "addressCountry": "IT" } },
+      "organizer": { "@type": "Organization", "name": "Ristorante La Ginestrella", "url": "https://www.ristorantelaginestrella.it/" },
+      "offers": { "@type": "Offer", "price": "45", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.ristorantelaginestrella.it/#eventi", "validFrom": "2026-11-02" }
+    }
+  ]
+}
+</script>
+
 <!-- JSON-LD: FAQ (stesso testo delle domande visibili in pagina) -->
 <script type="application/ld+json">
 {
@@ -548,13 +583,13 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
      data-scadenza = ultimo giorno in cui mostrarlo
      (il giorno dopo sparisce da solo).
      ════════════════════════════════════════════════════ -->
-<aside class="evidenza" data-scadenza="2026-11-01" aria-labelledby="titolo-evidenza">
+<aside class="evidenza" data-scadenza="2026-11-22" aria-labelledby="titolo-evidenza">
   <div class="ev-box">
     <div class="ev-sx">
-      <p class="ev-eye">In evidenza · Le domeniche d'autunno</p>
-      <h2 class="ev-titolo" id="titolo-evidenza">Sapori d'<em>Autunno</em></h2>
-      <p class="ev-quando">Ogni domenica a pranzo fino al 1° Novembre · ore 12:30</p>
-      <p class="ev-desc">Un menù dedicato ai sapori della stagione: tartufo nero, funghi porcini, zucca e castagne.</p>
+      <p class="ev-eye">In evidenza · Le domeniche di novembre</p>
+      <h2 class="ev-titolo" id="titolo-evidenza">A pranzo col <em>Tartufo</em></h2>
+      <p class="ev-quando">Domenica 15 e 22 Novembre · ore 12:30</p>
+      <p class="ev-desc">Il tartufo nero in tutto il menù: dalla tartare di Fassona al risotto al Timorasso, fino agli anolini con burro nocciola.</p>
     </div>
     <div class="ev-dx">
       <div class="ev-prezzo">
@@ -562,7 +597,7 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
         <span class="ev-sub">a persona<br>vini in abbinamento e caffè compresi</span>
       </div>
       <div class="ev-cta">
-        <a class="btn btn-chiaro" href="https://wa.me/393518640002?text=Vorrei%20prenotare%20per%20Sapori%20d%27Autunno"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>Prenota su WhatsApp</a>
+        <a class="btn btn-chiaro" href="https://wa.me/393518640002?text=Vorrei%20prenotare%20per%20A%20pranzo%20col%20tartufo"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>Prenota su WhatsApp</a>
         <a class="btn btn-linea" href="#eventi">Dettagli</a>
       </div>
     </div>
@@ -691,6 +726,23 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
   <div class="wrap">
     <p class="eyebrow">Eventi & Appuntamenti Speciali</p>
     <h2 class="section-title">I nostri <em>eventi</em></h2>
+
+    <div class="evento" data-scadenza="2026-11-22">
+      <div class="evento-img">
+        <img src="/images/a-pranzo-col-tartufo-2026.jpg" alt="Locandina A pranzo col tartufo – Ristorante La Ginestrella, domenica 15 e 22 novembre 2026 ore 12:30, 45 euro" loading="lazy" width="800" height="1200">
+      </div>
+      <div class="info">
+        <p class="eyebrow">Le domeniche di novembre</p>
+        <h3>A pranzo col <em>Tartufo</em></h3>
+        <p class="ev-data">Domenica 15 e 22 Novembre · ore 12:30</p>
+        <p>Salame di Varzi di nostra produzione, Coppa Piacentina DOP, tartare di Fassona al tartufo nero, flan di porri con fonduta di toma e crema al tartufo, cotechino croccante con mousse di patate al tartufo, formaggio al cartoccio con scaglie di tartufo nero. Risotto al Timorasso mantecato al Montebore e tartufo nero, anolini al tartufo con burro nocciola. Sorbetto ai frutti di bosco, arrosto con crema di funghi e tartufo, patate al forno, tiramisù. Prenotazione consigliata.</p>
+        <p class="prezzo-evento"><strong>45€</strong><span>a persona<br>vini in abbinamento e caffè compresi</span></p>
+        <div class="cta">
+          <a class="btn btn-wa" href="https://wa.me/393518640002?text=Vorrei%20prenotare%20per%20A%20pranzo%20col%20tartufo"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>Prenota su WhatsApp</a>
+          <a class="btn btn-ghost" href="tel:+39038352150"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>0383 52150</a>
+        </div>
+      </div>
+    </div>
 
     <!-- Modello per il prossimo evento (copiare, togliere il commento e aggiornare):
     <div class="evento" data-scadenza="AAAA-MM-GG">
