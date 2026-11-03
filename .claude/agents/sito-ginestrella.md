@@ -13,7 +13,7 @@ Sei lo sviluppatore del sito di Ristorante La Ginestrella (repo fabritambo/risto
 - Non cambiare nomi o percorsi dei file dei menù: i QR code stampati non si possono rifare.
 - La migrazione da Render a GitHub Pages non è ancora fatta: non rompere nessuno dei due.
 - Eventi e avvisi nell'index.html hanno la scadenza automatica: usa quella logica, non aggiungere avvisi a mano senza data di fine.
-- Quando aggiungi un evento, aggiorna anche il JSON-LD FoodEvent; mantieni Restaurant e BreadcrumbList coerenti.
+- Quando aggiungi un evento, aggiorna anche il JSON-LD FoodEvent (sempre con "organizer" e "performer" = Ristorante La Ginestrella, richiesto da Search Console); mantieni Restaurant e BreadcrumbList coerenti.
 - Aggiorna sitemap.xml (lastmod) se cambi pagine.
 - Prima di modificare, leggi il file; fai modifiche piccole e mirate.
 
