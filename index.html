@@ -78,6 +78,10 @@
   "openingHoursSpecification": [
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "12:00", "closes": "14:00" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "12:30", "closes": "14:00" }
+  ],
+  "specialOpeningHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "validFrom": "2026-12-25", "validThrough": "2026-12-25", "opens": "00:00", "closes": "00:00" },
+    { "@type": "OpeningHoursSpecification", "validFrom": "2027-01-01", "validThrough": "2027-01-01", "opens": "00:00", "closes": "00:00" }
   ]
 }
 </script>
@@ -133,6 +137,20 @@
       "organizer": { "@type": "Organization", "name": "Ristorante La Ginestrella", "url": "https://www.ristorantelaginestrella.it/" },
       "performer": { "@type": "Organization", "name": "Ristorante La Ginestrella", "url": "https://www.ristorantelaginestrella.it/" },
       "offers": { "@type": "Offer", "price": "40", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.ristorantelaginestrella.it/#eventi", "validFrom": "2026-11-05" }
+    },
+    {
+      "@type": "FoodEvent",
+      "name": "Pranzo di Santo Stefano",
+      "startDate": "2026-12-26T12:30:00+01:00",
+      "endDate": "2026-12-26T15:00:00+01:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "Pranzo di Santo Stefano: salumi e antipasti della tradizione, risotto alla Bonarda, ravioli del plin, guancia di manzo brasata al Buttafuoco e meringata alle nocciole. Vini in abbinamento e caffè inclusi.",
+      "image": "https://www.ristorantelaginestrella.it/images/santo-stefano-2026.jpg",
+      "location": { "@type": "Restaurant", "name": "Ristorante La Ginestrella", "address": { "@type": "PostalAddress", "streetAddress": "Frazione Cella, 32", "addressLocality": "Varzi", "addressRegion": "PV", "postalCode": "27057", "addressCountry": "IT" } },
+      "organizer": { "@type": "Organization", "name": "Ristorante La Ginestrella", "url": "https://www.ristorantelaginestrella.it/" },
+      "performer": { "@type": "Organization", "name": "Ristorante La Ginestrella", "url": "https://www.ristorantelaginestrella.it/" },
+      "offers": { "@type": "Offer", "price": "45", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.ristorantelaginestrella.it/#eventi", "validFrom": "2026-11-13" }
     }
   ]
 }
@@ -778,6 +796,23 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
       </div>
     </div>
 
+    <div class="evento" data-scadenza="2026-12-26">
+      <div class="evento-img">
+        <img src="/images/santo-stefano-2026.jpg" alt="Locandina Pranzo di Santo Stefano – Ristorante La Ginestrella, sabato 26 dicembre 2026 ore 12:30, 45 euro" loading="lazy" width="800" height="1200">
+      </div>
+      <div class="info">
+        <p class="eyebrow">Le feste a tavola</p>
+        <h3>Pranzo di <em>Santo Stefano</em></h3>
+        <p class="ev-data">Sabato 26 Dicembre · ore 12:30</p>
+        <p>Salame di Varzi di nostra produzione, Coppa Piacentina DOP, tartare di Fassona tartufata, cestino croccante con insalata russa, sformatino di funghi porcini con Castelmagno fondente, cotechino con mousse di lenticchie. Risotto alla Bonarda con fonduta al Parmigiano e ravioli del plin al sugo di arrosto. Sorbetto al melograno. Guancia di manzo brasata al Buttafuoco con purè di patate. Meringata alle nocciole. Prenotazione consigliata.</p>
+        <p class="prezzo-evento"><strong>45€</strong><span>a persona<br>vini in abbinamento e caffè compresi</span></p>
+        <div class="cta">
+          <a class="btn btn-wa" href="https://wa.me/393518640002?text=Vorrei%20prenotare%20per%20il%20Pranzo%20di%20Santo%20Stefano%20(26%20dicembre)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>Prenota su WhatsApp</a>
+          <a class="btn btn-ghost" href="tel:+39038352150"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>0383 52150</a>
+        </div>
+      </div>
+    </div>
+
     <!-- Modello per il prossimo evento (copiare, togliere il commento e aggiornare):
     <div class="evento" data-scadenza="AAAA-MM-GG">
       <div class="evento-img">
@@ -1061,6 +1096,9 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
           </tbody>
         </table>
         <p class="nota-chiusura">✦ <strong>Sabato sera</strong> aperti solo su prenotazione.</p>
+        <div class="nota-chiusura" data-scadenza="2027-01-01">
+          <p>✦ <strong>Feste:</strong> chiusi venerdì 25 dicembre (Natale) e venerdì 1° gennaio. Sabato 26 dicembre siamo aperti con il <a href="#eventi">Pranzo di Santo Stefano</a>.</p>
+        </div>
         <!-- NOTA CHIUSURA (es. ferie) — copiare, togliere il commento, data-scadenza = ultimo giorno:
         <div class="nota-chiusura" data-scadenza="AAAA-MM-GG">
           <p>✦ <strong>Chiusura per ferie:</strong> da lunedì X a lunedì Y compresi. Riapriamo martedì Z con i consueti orari.</p>
