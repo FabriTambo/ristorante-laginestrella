@@ -9,194 +9,90 @@
 <link rel="canonical" href="https://www.ristorantelaginestrella.it/privacy-policy">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Cinzel:wght@500;600&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-:root {
-  --oro: #B8872A; --oro-chiaro: #D4A843; --oro-sottile: rgba(184,135,42,0.15);
-  --crema: #F5EDD8; --fumo: #1A120D; --fumo-medio: #231810; --fumo-chiaro: #2E2016;
-  --terra: #5C3A1E; --bianco-caldo: #FBF6EC;
-  --ease-silk: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --avorio:#FBF5E6;--carta:#FFFBF2;--sabbia:#F4EBD6;--inchiostro:#2C1A08;--testo-2:#5A4630;
+  --oro:#96660A;--oro-c:#7A5208;--bordo:rgba(120,80,10,.22);--filetto:rgba(120,80,10,.13);
+  --verde:#3D5A3F;--verde-s:#2F4731;--ginestra:#EDBE2E;--oro-chiaro:#F3DFA0;--su-verde:#E9E4D0;
+  --font-display:'Cormorant Garamond',Georgia,serif;--font-label:'Cinzel',Georgia,serif;
 }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  background: var(--fumo); color: var(--crema);
-  font-size: 16px; line-height: 1.6;
-}
-a { color: var(--oro); text-decoration: none; }
-a:hover { color: var(--oro-chiaro); }
+html{scroll-behavior:smooth}
+body{font-family:var(--font-display);font-weight:500;font-size:1.18rem;line-height:1.6;color:var(--inchiostro);background:var(--avorio)}
+a{color:var(--verde);text-decoration:underline;text-underline-offset:2px}
+a:hover{color:var(--oro-c)}
 
-body::before {
-  content: ''; position: fixed; inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-  opacity: 0.025; pointer-events: none; z-index: 9999;
-}
+/* Testata (come il sito) */
+.testata{position:sticky;top:0;z-index:100;background:rgba(251,245,230,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--bordo)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:64px;max-width:1160px;margin:0 auto;padding:0 1.25rem}
+.nav-brand{text-decoration:none;line-height:1.15;color:var(--inchiostro)}
+.nav-brand strong{display:block;font-family:var(--font-label);font-weight:600;font-size:1rem;letter-spacing:.14em}
+.nav-brand span{font-size:.98rem;font-style:italic;color:var(--testo-2)}
+.nav-back{display:inline-flex;align-items:center;min-height:42px;padding:.5rem 1rem;border-radius:6px;background:var(--verde);color:var(--avorio);font-family:var(--font-label);font-weight:600;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
+.nav-back:hover{background:var(--verde-s);color:var(--avorio)}
 
-/* NAV */
-.nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 1.2rem 4rem;
-  background: rgba(26,18,13,0.97);
-  border-bottom: 1px solid var(--oro-sottile);
-  backdrop-filter: blur(12px);
-}
-.nav-brand {
-  font-family: 'Cinzel', serif; font-size: 0.9rem;
-  letter-spacing: 0.24em; color: var(--oro); text-decoration: none;
-}
-.nav-back {
-  font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.2em;
-  color: rgba(234,217,187,0.6); text-decoration: none;
-  display: flex; align-items: center; gap: 0.6rem;
-  transition: color 0.3s;
-}
-.nav-back:hover { color: var(--oro); }
+/* Intestazione pagina */
+.pp-hero{background:var(--sabbia);border-bottom:1px solid var(--bordo);padding:3.5rem 1.25rem 3rem}
+.pp-hero>*{max-width:860px;margin-left:auto;margin-right:auto}
+.pp-label{display:flex;align-items:center;gap:.6rem;font-family:var(--font-label);font-weight:600;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--oro-c);margin-bottom:.75rem}
+.pp-label::before{content:'';width:24px;height:1px;background:var(--oro)}
+.pp-hero h1{font-weight:600;font-size:clamp(2.3rem,6vw,3.4rem);line-height:1.1;color:var(--inchiostro)}
+.pp-hero h1 em{font-style:italic;color:var(--verde)}
+.pp-meta{margin-top:1rem;font-size:1rem;font-style:italic;color:var(--testo-2)}
 
-/* HERO */
-.pp-hero {
-  padding: 12rem 8rem 5rem;
-  border-bottom: 1px solid var(--oro-sottile);
-  position: relative;
-}
-.pp-hero::after {
-  content: '';
-  position: absolute; bottom: 0; left: 8%; right: 8%; height: 1px;
-  background: linear-gradient(to right, transparent, var(--oro-sottile), transparent);
-}
-.pp-label {
-  font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.45em;
-  color: var(--oro); margin-bottom: 1rem;
-  display: flex; align-items: center; gap: 0.8rem;
-}
-.pp-label::before { content: ''; width: 24px; height: 1px; background: var(--oro); }
-.pp-hero h1 {
-  font-family: 'Cormorant Garamond', serif; font-weight: 300;
-  font-size: clamp(2.5rem, 5vw, 4rem); color: var(--bianco-caldo);
-  line-height: 1.1; letter-spacing: -0.01em;
-}
-.pp-hero h1 em { font-style: italic; color: var(--oro-chiaro); }
-.pp-meta {
-  margin-top: 1.5rem; font-size: 0.88rem;
-  color: rgba(234,217,187,0.4); font-style: italic;
-}
+/* Contenuto */
+.pp-wrap{max-width:860px;margin:0 auto;padding:3rem 1.25rem 4rem}
 
-/* CONTENT */
-.pp-wrap {
-  max-width: 860px; margin: 0 auto;
-  padding: 5rem 4rem 8rem;
-}
+.pp-index{background:var(--carta);border:1px solid var(--bordo);border-radius:8px;padding:1.6rem 2rem;margin-bottom:3rem}
+.pp-index h3{font-family:var(--font-label);font-weight:600;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--oro-c);margin-bottom:1rem}
+.pp-index ol{list-style:none;counter-reset:idx;display:grid;grid-template-columns:1fr 1fr;gap:.3rem 2rem}
+.pp-index ol li{counter-increment:idx;font-size:1.05rem}
+.pp-index ol li::before{content:counter(idx) '. ';color:var(--oro);font-family:var(--font-label);font-size:.8rem}
+.pp-index ol li a{color:var(--inchiostro);text-decoration:none}
+.pp-index ol li a:hover{color:var(--verde);text-decoration:underline}
 
-/* INDEX */
-.pp-index {
-  background: rgba(184,135,42,0.05);
-  border: 1px solid var(--oro-sottile);
-  padding: 2rem 2.5rem; margin-bottom: 4rem;
-}
-.pp-index h3 {
-  font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.28em;
-  color: var(--oro); margin-bottom: 1.2rem;
-}
-.pp-index ol {
-  list-style: none; counter-reset: idx;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 2rem;
-}
-.pp-index ol li {
-  counter-increment: idx; font-size: 0.92rem;
-  color: rgba(234,217,187,0.6);
-}
-.pp-index ol li::before {
-  content: counter(idx) '. ';
-  color: var(--oro); font-family: 'Cinzel', serif; font-size: 0.75rem;
-}
-.pp-index ol li a { color: rgba(234,217,187,0.6); }
-.pp-index ol li a:hover { color: var(--oro-chiaro); }
+.pp-section{margin-bottom:2.8rem;scroll-margin-top:84px}
+.pp-section h2{display:flex;align-items:center;gap:.9rem;font-family:var(--font-label);font-weight:600;font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;color:var(--verde);margin-bottom:1.2rem;padding-bottom:.7rem;border-bottom:1px solid var(--bordo)}
+.pp-section h2 .num{font-family:var(--font-display);font-size:1.9rem;font-weight:600;color:var(--oro);line-height:1;flex-shrink:0}
+.pp-section p{margin-bottom:1rem;line-height:1.75}
+.pp-section p:last-child{margin-bottom:0}
+.pp-section ul{list-style:none;margin:1rem 0}
+.pp-section ul li{position:relative;padding:.3rem 0 .3rem 1.5rem;line-height:1.65}
+.pp-section ul li::before{content:'—';position:absolute;left:0;color:var(--oro)}
+.pp-section strong{font-weight:600}
 
-/* SECTIONS */
-.pp-section { margin-bottom: 3.5rem; scroll-margin-top: 100px; }
-.pp-section h2 {
-  font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.3em;
-  color: var(--oro); margin-bottom: 1.5rem;
-  padding-bottom: 0.8rem;
-  border-bottom: 1px solid var(--oro-sottile);
-  display: flex; align-items: center; gap: 1rem;
-}
-.pp-section h2 .num {
-  font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300;
-  color: var(--oro-sottile); line-height: 1; flex-shrink: 0;
-}
-.pp-section p {
-  font-size: 1rem; line-height: 2; color: rgba(234,217,187,0.72);
-  font-weight: 300; margin-bottom: 1rem;
-}
-.pp-section p:last-child { margin-bottom: 0; }
-.pp-section ul {
-  list-style: none; margin: 1rem 0;
-}
-.pp-section ul li {
-  font-size: 0.98rem; color: rgba(234,217,187,0.7); line-height: 1.85;
-  padding: 0.4rem 0;
-  padding-left: 1.5rem; position: relative;
-}
-.pp-section ul li::before {
-  content: '—'; position: absolute; left: 0;
-  color: var(--oro); font-size: 0.8rem;
-}
-.pp-section strong { color: rgba(234,217,187,0.9); font-weight: 400; }
+.info-box{background:var(--carta);border:1px solid var(--bordo);border-left:3px solid var(--verde);border-radius:6px;padding:1.2rem 1.5rem;margin:1.5rem 0}
+.info-box p{margin-bottom:0}
 
-/* INFO BOX */
-.info-box {
-  background: rgba(184,135,42,0.06);
-  border: 1px solid var(--oro-sottile);
-  border-left: 3px solid var(--oro);
-  padding: 1.5rem 2rem; margin: 1.5rem 0;
-}
-.info-box p { font-size: 0.95rem; margin-bottom: 0; }
+.titolare-block{background:var(--carta);border:1px solid var(--bordo);border-radius:8px;padding:1.6rem 2rem;margin-top:1.5rem}
+.titolare-block h4{font-family:var(--font-label);font-weight:600;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--oro-c);margin-bottom:.8rem}
+.titolare-block p{line-height:1.8;margin-bottom:0}
 
-/* CONTACT BLOCK */
-.titolare-block {
-  background: var(--fumo-chiaro);
-  border: 1px solid var(--oro-sottile);
-  padding: 2rem 2.5rem;
-  margin-top: 1.5rem;
-}
-.titolare-block h4 {
-  font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.28em;
-  color: var(--oro); margin-bottom: 1rem;
-}
-.titolare-block p {
-  font-size: 0.95rem; color: rgba(234,217,187,0.65);
-  line-height: 1.85; margin-bottom: 0;
-}
+/* Piede (come il sito) */
+.pp-footer{background:var(--verde-s);color:var(--su-verde);padding:2.2rem 1.25rem;text-align:center;font-size:1rem}
+.pp-footer p{max-width:860px;margin:0 auto}
+.pp-footer a{color:var(--avorio)}
 
-/* FOOTER */
-.pp-footer {
-  border-top: 1px solid var(--oro-sottile);
-  padding: 3rem 4rem;
-  text-align: center;
-}
-.pp-footer p {
-  font-family: 'Cinzel', serif; font-size: 0.56rem;
-  letter-spacing: 0.15em; color: rgba(245,237,216,0.2);
-}
-
-@media (max-width: 768px) {
-  .nav { padding: 1rem 1.5rem; }
-  .pp-hero { padding: 9rem 1.5rem 3rem; }
-  .pp-wrap { padding: 3rem 1.5rem 5rem; }
-  .pp-index ol { grid-template-columns: 1fr; }
-  .pp-footer { padding: 2rem 1.5rem; }
+@media (max-width:768px){
+  .nav-brand span{display:none}
+  .pp-index ol{grid-template-columns:1fr}
+  .pp-index,.titolare-block{padding:1.3rem 1.2rem}
 }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav" role="navigation" aria-label="Navigazione">
-  <a href="/" class="nav-brand" aria-label="Torna alla homepage">La Ginestrella</a>
-  <a href="/" class="nav-back" aria-label="Torna alla homepage">← Torna al sito</a>
-</nav>
+<header class="testata">
+  <nav class="nav" aria-label="Navigazione">
+    <a href="/" class="nav-brand" aria-label="Torna alla homepage">
+      <strong>La Ginestrella</strong>
+      <span>Cella di Varzi · Oltrepò Pavese</span>
+    </a>
+    <a href="/" class="nav-back">← Torna al sito</a>
+  </nav>
+</header>
 
 <main>
 <!-- HERO -->
@@ -370,7 +266,7 @@ body::before {
 
 <!-- FOOTER -->
 <footer class="pp-footer">
-  <p>© 2026 Ristorante La Ginestrella · Frazione Cella 32, Varzi (PV) · Privacy Policy · Tutti i diritti riservati</p>
+  <p>© 2026 Ristorante La Ginestrella · Frazione Cella 32, Varzi (PV) · <a href="/">Torna al sito</a></p>
 </footer>
 
 </body>
