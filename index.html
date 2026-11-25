@@ -127,20 +127,6 @@
     },
     {
       "@type": "FoodEvent",
-      "name": "I Bolliti",
-      "startDate": "2026-11-21T12:30:00+01:00",
-      "endDate": "2026-11-21T15:00:00+01:00",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "description": "Pranzo dei bolliti: bagna caòda, salumi e antipasti della tradizione, bolliti misti con salsa verde, mostarda e composta di cipolle, costine con la verza e dolce. Vini in abbinamento, acqua e caffè inclusi.",
-      "image": "https://www.ristorantelaginestrella.it/images/i-bolliti-2026.jpg",
-      "location": { "@type": "Restaurant", "name": "Ristorante La Ginestrella", "address": { "@type": "PostalAddress", "streetAddress": "Frazione Cella, 32", "addressLocality": "Varzi", "addressRegion": "PV", "postalCode": "27057", "addressCountry": "IT" } },
-      "organizer": { "@type": "Organization", "name": "Ristorante La Ginestrella", "url": "https://www.ristorantelaginestrella.it/" },
-      "performer": { "@type": "Organization", "name": "Ristorante La Ginestrella", "url": "https://www.ristorantelaginestrella.it/" },
-      "offers": { "@type": "Offer", "price": "40", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.ristorantelaginestrella.it/#eventi", "validFrom": "2026-11-05" }
-    },
-    {
-      "@type": "FoodEvent",
       "name": "Il nostro Menù – Domenica 29 novembre",
       "startDate": "2026-11-29T12:30:00+01:00",
       "endDate": "2026-11-29T15:00:00+01:00",
@@ -715,38 +701,50 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
       <!-- MENÙ DEL MOMENTO: aggiornare quando cambia.
            Il dettaglio con gli allergeni è nel menù digitale (/allergeni/, che rimanda a bot-ginestrella.onrender.com). -->
       <div class="menu-card">
-        <p class="mc-eye">Sabato 21 Novembre · ore 12:30</p>
-        <h3 class="mc-titolo">I <em>Bolliti</em></h3>
+        <p class="mc-eye">Sabato 28 e Domenica 29 Novembre · ore 12:30</p>
+        <h3 class="mc-titolo">Il nostro <em>Menù</em></h3>
         <div class="mc-info">
           <span class="mc-prezzo">40€</span>
           <span class="mc-sub">a persona<br>vini in abbinamento, acqua e caffè compresi</span>
         </div>
-        <p class="mc-nota">Sabato 21 novembre a pranzo si serve solo il menù dei Bolliti: il menù completo del sabato torna dalla settimana successiva.</p>
+        <p class="mc-nota">Lo stesso menù nei due giorni: cambia solo il secondo, brasato di manzo il sabato e stinco di vitello la domenica.</p>
       </div>
 
       <div class="portata">
         <div class="portata-head"><span class="portata-icon" aria-hidden="true">🥩</span><h3>Gli Antipasti</h3></div>
         <ul>
-          <li>Bagna caòda con le sue verdure</li>
+          <li>Bagna caòda con le verdure</li>
           <li>Salame di Varzi di nostra produzione</li>
           <li>Coppa Piacentina DOP</li>
-          <li>Salame cotto</li>
-          <li>Lingua in salsa verde</li>
-          <li>Cotechino con mousse di lenticchie</li>
+          <li>Tartare di Fassona agli agrumi</li>
+          <li>Flan di cavolo viola con crema al Gorgonzola</li>
+          <li>Formaggio al cartoccio con miele e noci</li>
+        </ul>
+      </div>
+      <div class="portata">
+        <div class="portata-head"><span class="portata-icon" aria-hidden="true">🍝</span><h3>I Primi</h3></div>
+        <ul>
+          <li>Risotto alla Bonarda con fonduta al Parmigiano</li>
+          <li>Gnocchetti con ragù di funghi e salsiccia</li>
+        </ul>
+      </div>
+      <div class="portata">
+        <div class="portata-head"><span class="portata-icon" aria-hidden="true">🍧</span><h3>L'Intermezzo</h3></div>
+        <ul>
+          <li>Sorbetto alla mela verde</li>
         </ul>
       </div>
       <div class="portata">
         <div class="portata-head"><span class="portata-icon" aria-hidden="true">🍖</span><h3>Il Secondo</h3></div>
         <ul>
-          <li>Bolliti misti: testina, muscolo, biancostato, brutto e buono, coda</li>
-          <li>Salsa verde, mostarda mantovana e composta di cipolle di Tropea</li>
-          <li>Costine con la verza</li>
+          <li><strong>Sabato:</strong> brasato di manzo con patate al forno</li>
+          <li><strong>Domenica:</strong> stinco di vitello con patate al forno</li>
         </ul>
       </div>
       <div class="portata">
         <div class="portata-head"><span class="portata-icon" aria-hidden="true">🍮</span><h3>Il Dolce</h3></div>
         <ul>
-          <li>Crumble di mele con gelato alla vaniglia</li>
+          <li>Bonet agli amaretti</li>
         </ul>
       </div>
 
@@ -785,23 +783,6 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
         <p class="prezzo-evento"><strong>45€</strong><span>a persona<br>vini in abbinamento, acqua e caffè compresi</span></p>
         <div class="cta">
           <a class="btn btn-wa" href="https://wa.me/393518640002?text=Vorrei%20prenotare%20per%20A%20pranzo%20col%20tartufo"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>Prenota su WhatsApp</a>
-          <a class="btn btn-ghost" href="tel:+39038352150"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>0383 52150</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="evento" data-scadenza="2026-11-21">
-      <div class="evento-img">
-        <img src="/images/i-bolliti-2026.jpg" alt="Locandina I Bolliti – Ristorante La Ginestrella, sabato 21 novembre 2026 ore 12:30, 40 euro" loading="lazy" width="800" height="1200">
-      </div>
-      <div class="info">
-        <p class="eyebrow">Sabato a pranzo</p>
-        <h3>I <em>Bolliti</em></h3>
-        <p class="ev-data">Sabato 21 Novembre · ore 12:30</p>
-        <p>Bagna caòda con le sue verdure, Salame di Varzi di nostra produzione, Coppa Piacentina DOP, salame cotto, lingua in salsa verde, cotechino con mousse di lenticchie. Bolliti misti (testina, muscolo, biancostato, brutto e buono, coda) con salsa verde, mostarda mantovana e composta di cipolle di Tropea, costine con la verza. Crumble di mele con gelato alla vaniglia. Prenotazione consigliata.</p>
-        <p class="prezzo-evento"><strong>40€</strong><span>a persona<br>vini in abbinamento, acqua e caffè compresi</span></p>
-        <div class="cta">
-          <a class="btn btn-wa" href="https://wa.me/393518640002?text=Vorrei%20prenotare%20per%20I%20Bolliti%20di%20sabato%2021%20novembre"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>Prenota su WhatsApp</a>
           <a class="btn btn-ghost" href="tel:+39038352150"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-tel"/></svg>0383 52150</a>
         </div>
       </div>
